@@ -29,14 +29,14 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 * Role: Team Lead
 * Responsibilities: UI
 
-### Johnny Doe
+### Chu Wei Rong
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/wr1159.png" width="200px">
 
-[[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
+[[github](http://github.com/wr1159)] [[portfolio](team/wr1159.md)] [[email](mailto:chuweirong@u.nus.edu)]
 
 * Role: Developer
-* Responsibilities: Data
+* Responsibilities: Git Expert
 
 ### Jean Doe
 
