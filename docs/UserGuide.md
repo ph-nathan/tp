@@ -90,6 +90,19 @@ List all events hosted by the CCA
 
 Format: `list /event`
 
+### View Members of Event : `view /event`
+
+Lists all the members of a specified event index.
+
+Format: `view /event EVENT_INDEX`
+* Views the members of the event at the specified `EVENT_INDEX`.
+* The index refers to the index number shown in the displayed event list.
+* The index **must be a positive integer** that is within the range of the length of the event list.
+
+Examples:
+* `view /event 1` displays members of the 1st event in the event list.
+* `view /event 10` displays members of the 10th event in the event list.
+
 ### Create an Event : `create /event`
 
 Creates a new event and adds it to the database.
