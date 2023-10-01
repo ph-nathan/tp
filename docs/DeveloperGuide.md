@@ -310,6 +310,23 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
+**Use case : UC02 - List all members**
+
+**MSS**
+
+1. User requests to list all members
+2. CCACommander lists all members in the CCA
+
+   Use case ends.
+
+**Extensions**
+
+* 1a. The list of all members is empty.
+
+    * 1a1. CCACommander shows an empty member list.
+
+      Use case ends.
+
 *{More to be added}*
 
 ### Non-Functional Requirements
