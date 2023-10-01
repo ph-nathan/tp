@@ -283,28 +283,58 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `CCACommander` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+**Use case: UC06 - Create an event**
+
+**Guarantees: MSS -> Entered event will be added.**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1.  User requests to add an event to the list 
+2.  CCACommander adds that event to the event list and displays the event added
 
     Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+* 1a. User uses the command incorrectly
 
-  Use case ends.
+    * 1a1. CCACommander shows an error message
+
+      Use case ends.
+  
+* 1b. The entered event already exists
+
+    * 1b1. CCACommander shows an error message
+
+      Use case ends.
+
+
+**Use case: UC07 - Delete an event**
+
+**Guarantees: MSS -> Specified event will be deleted.**
+
+**MSS**
+
+1.  User <ins>lists all events</ins> (UC02)
+2.  CCACommander shows a list of all events
+3.  User requests to delete a specific event in the list of all events
+4.  CCACommander deletes the specific event
+
+    Use case ends.
+
+**Extensions**
+
+* 2a. The list of all events is empty.
+
+    * 2a1. CCACommander shows an error message.
+
+      Use case ends.
 
 * 3a. The given index is invalid.
 
-    * 3a1. AddressBook shows an error message.
+    * 3a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
 
