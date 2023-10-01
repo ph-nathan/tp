@@ -270,14 +270,18 @@ _{Explain here how the data archiving feature will be implemented}_
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                                    | I want to …​                     | So that I can…​                                                        |
-| -------- | ------------------------------------------ | ------------------------------ | ---------------------------------------------------------------------- |
-| `* * *`  | new user                                   | see usage instructions         | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person               |                                                                        |
-| `* * *`  | user                                       | delete a person                | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name          | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details   | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name           | locate a person easily                                                 |
+| Priority | As a …​       | I can …​                                    | So that …​                                                                         |
+|----------|---------------|---------------------------------------------|------------------------------------------------------------------------------------|
+| `* * *`  | beginner user | create a new profile of a CCA member        | I can keep track of their information                                              |
+| `* * *`  | power user    | delete the profile of a CCA member          | I can remove them from the system when needed                                      |
+| `* * *`  | beginner user | list all members in my CCA                  | I can keep track of my CCA strength                                                |
+| `* * *`  | beginner user | add a new event hosted by the CCA           | I can keep track of upcoming activities                                            |
+| `* * *`  | power user    | delete an event                             | I can remove it from the schedule.                                                 |
+| `* * *`  | power user    | view a list of all events hosted by the CCA | I can see event history                                                            |
+| `* *`    | beginner user | add a member to an event                    | I can track which members are participating in the event.                          |
+| `* *`    | beginner user | remove a member from an event               | I can amend adding the wrong person to an event.                                   |
+| `* *`    | beginner user | view the members who attended an event      | I can estimate the number of members who will attend similar events in the future. |
+| `* *`    | beginner user | view events of a member                     | I can check how involved that particular member is.                                |
 
 *{More to be added}*
 
