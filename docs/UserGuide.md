@@ -77,6 +77,19 @@ Examples:
 * `delete /member 1 ` deletes the 1st member in the member list.
 * `delete /member 10 ` deletes the 10th member in the member list.
 
+
+### List all Members : `list /member`
+
+List all members in the CCA.
+
+Format: `list /member`
+
+### List all Events : `list /event`
+
+List all events hosted by the CCA
+
+Format: `list /event`
+
 ### Viewing help : `help`
 
 Shows a message explaining how to access the help page.
