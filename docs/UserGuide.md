@@ -90,6 +90,32 @@ List all events hosted by the CCA
 
 Format: `list /event`
 
+### View Members of Event : `view /event`
+
+Lists all the members of a specified event index.
+
+Format: `view /event EVENT_INDEX`
+* Views the members of the event at the specified `EVENT_INDEX`.
+* The index refers to the index number shown in the displayed event list.
+* The index **must be a positive integer** that is within the range of the length of the event list.
+
+Examples:
+* `view /event 1` displays members of the 1st event in the event list.
+* `view /event 10` displays members of the 10th event in the event list.
+
+### View Events of Member : `view /member`
+
+Lists all the events of a specified member index.
+
+Format: `view /member MEMBER_INDEX`
+* Views the events of the member at the specified `MEMBER_INDEX`.
+* The index refers to the index number shown in the displayed member list.
+* The index **must be a positive integer** that is within the range of the length of the member list.
+
+Examples:
+* `view /member 1` displays members of the 1st member in the member list.
+* `view /member 10` displays members of the 10th member in the member list.
+
 ### Create an Event : `create /event`
 
 Creates a new event and adds it to the database.
@@ -246,6 +272,8 @@ Action | Format, Examples
 **Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
 **List all members** | `list /member`
 **List all events** | `list /event`
+**View members of event** | `view /event EVENT_INDEX` <br> e.g.`view /event 1`
+**View events of member** | `view /member MEMBER_INDEX` <br> e.g.`view /member 1`
 **Create an event** | `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]` <br> e.g.`create /event n/Party l/Raffles Hall d/16-09-2023`
 **Delete an event** | `delete /event EVENT_INDEX` <br> e.g.`delete /event 1`
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
