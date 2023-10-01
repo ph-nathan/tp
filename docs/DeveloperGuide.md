@@ -285,28 +285,70 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+**Use case: UC01 - Delete a member**
+
+**Guarantees: MSS -> Specified member will be deleted.**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1. User requests to <ins>list all members</ins> (UC02)
+2. CCACommander shows a list of all members
+3. User requests to delete a specific member in the list of all members
+4. CCACommander deletes the specific member
 
     Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+* 2a. The list of all members is empty.
 
-  Use case ends.
+  * 2a1. CCACommander shows an error message.
+
+    Use case ends.
 
 * 3a. The given index is invalid.
 
-    * 3a1. AddressBook shows an error message.
+    * 3a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
+
+**Use case : UC02 - List all members**
+
+**Guarantees: MSS -> All members will be listed.**
+
+**MSS**
+
+1. User requests to list all members
+2. CCACommander lists all members in the CCA
+
+   Use case ends.
+
+**Extensions**
+
+* 1a. The list of all members is empty.
+
+    * 1a1. CCACommander shows an empty member list.
+
+      Use case ends.
+
+**Use case : UC03 - List all events**
+
+**Guarantees: MSS -> All events will be listed.**
+
+**MSS**
+
+1. User requests to list all events
+2. CCACommander lists all events in the CCA
+
+   Use case ends.
+
+**Extensions**
+
+* 1a. The list of all events is empty.
+
+    * 1a1. CCACommander shows an empty event list.
+
+      Use case ends.
 
 *{More to be added}*
 
