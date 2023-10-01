@@ -76,7 +76,7 @@ Format: `delete /member MEMBER_INDEX`
 Examples:
 * `delete /member 1 ` deletes the 1st member in the member list.
 * `delete /member 10 ` deletes the 10th member in the member list.
-
+ 
 
 ### List all Members : `list /member`
 
@@ -90,6 +90,15 @@ List all events hosted by the CCA
 
 Format: `list /event`
 
+### Create an Event : `create /event`
+
+Creates a new event and adds it to the database.
+
+Format: `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]`
+
+Examples:
+* `create /event n/Party l/Raffles Hall d/16-09-2023`
+* `create /event n/CHEC d/16-02/2024` 
 
 
 ## FEATURES FROM AB3 (START)
