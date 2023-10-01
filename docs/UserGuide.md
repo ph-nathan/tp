@@ -90,6 +90,9 @@ List all events hosted by the CCA
 
 Format: `list /event`
 
+
+
+## FEATURES FROM AB3 (START)
 ### Viewing help : `help`
 
 Shows a message explaining how to access the help page.
@@ -195,6 +198,8 @@ If your changes to the data file makes its format invalid, AddressBook will disc
 ### Archiving data files `[coming in v2.0]`
 
 _Details coming soon ..._
+## FEATURES FROM AB3 (END)
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -215,6 +220,9 @@ _Details coming soon ..._
 
 Action | Format, Examples
 --------|------------------
+**Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
+**List all members** | `list /member`
+**List all events** | `list /event`
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
