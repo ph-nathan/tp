@@ -98,7 +98,21 @@ Format: `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]`
 
 Examples:
 * `create /event n/Party l/Raffles Hall d/16-09-2023`
-* `create /event n/CHEC d/16-02/2024` 
+* `create /event n/Combined Hall Ensemble Concert d/16-02/2024` 
+
+### Delete an Event: `delete /event`
+
+Deletes the event at the specified index.
+
+Format: `delete /event EVENT_INDEX`
+
+* Deletes the event at the specified `EVENT_INDEX`.
+* The index refers to the index number shown in the displayed event list.
+* The index **must be a positive integer** that is within the range of the length of the event list.
+
+Examples:
+* `delete /event 1 ` deletes the 1st event in the event list.
+* `delete /event 10 ` deletes the 10th event in the event list.
 
 
 ## FEATURES FROM AB3 (START)
