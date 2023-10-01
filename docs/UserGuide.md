@@ -76,7 +76,7 @@ Format: `delete /member MEMBER_INDEX`
 Examples:
 * `delete /member 1 ` deletes the 1st member in the member list.
 * `delete /member 10 ` deletes the 10th member in the member list.
-
+ 
 
 ### List all Members : `list /member`
 
@@ -90,6 +90,29 @@ List all events hosted by the CCA
 
 Format: `list /event`
 
+### Create an Event : `create /event`
+
+Creates a new event and adds it to the database.
+
+Format: `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]`
+
+Examples:
+* `create /event n/Party l/Raffles Hall d/16-09-2023`
+* `create /event n/Combined Hall Ensemble Concert d/16-02/2024` 
+
+### Delete an Event: `delete /event`
+
+Deletes the event at the specified index.
+
+Format: `delete /event EVENT_INDEX`
+
+* Deletes the event at the specified `EVENT_INDEX`.
+* The index refers to the index number shown in the displayed event list.
+* The index **must be a positive integer** that is within the range of the length of the event list.
+
+Examples:
+* `delete /event 1 ` deletes the 1st event in the event list.
+* `delete /event 10 ` deletes the 10th event in the event list.
 
 
 ## FEATURES FROM AB3 (START)
@@ -223,6 +246,8 @@ Action | Format, Examples
 **Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
 **List all members** | `list /member`
 **List all events** | `list /event`
+**Create an event** | `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]` <br> e.g.`create /event n/Party l/Raffles Hall d/16-09-2023`
+**Delete an event** | `delete /event EVENT_INDEX` <br> e.g.`delete /event 1`
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
