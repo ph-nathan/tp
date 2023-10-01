@@ -285,26 +285,28 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+**Use case: UC01 - Delete a member**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1. User requests to <ins>list all members</ins> (UC02)
+2. CCACommander shows a list of all members
+3. User requests to delete a specific member in the list of all members
+4. CCACommander deletes the specific member
 
     Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+* 2a. The list of all members is empty.
 
-  Use case ends.
+  * 2a1. CCACommander shows an error message.
+
+    Use case ends.
 
 * 3a. The given index is invalid.
 
-    * 3a1. AddressBook shows an error message.
+    * 3a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
 
