@@ -287,6 +287,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **Use case: UC01 - Delete a member**
 
+**Guarantees: MSS -> Specified member will be deleted.**
+
 **MSS**
 
 1. User requests to <ins>list all members</ins> (UC02)
@@ -312,6 +314,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **Use case : UC02 - List all members**
 
+**Guarantees: MSS -> All members will be listed.**
+
 **MSS**
 
 1. User requests to list all members
@@ -328,6 +332,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
       Use case ends.
 
 **Use case : UC03 - List all events**
+
+**Guarantees: MSS -> All events will be listed.**
 
 **MSS**
 
