@@ -78,17 +78,11 @@ Examples:
 * `delete /member 10 ` deletes the 10th member in the member list.
  
 
-### List all Members : `list /member`
+### List all Members and all Events : `list`
 
-List all members in the CCA.
+List all members and all events in the CCA in 2 separate columns.
 
-Format: `list /member`
-
-### List all Events : `list /event`
-
-List all events hosted by the CCA
-
-Format: `list /event`
+Format: `list`
 
 ### View Members of Event : `view /event`
 
@@ -270,8 +264,7 @@ _Details coming soon ..._
 Action | Format, Examples
 --------|------------------
 **Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
-**List all members** | `list /member`
-**List all events** | `list /event`
+**List all members and all events** | `list`
 **View members of event** | `view /event EVENT_INDEX` <br> e.g.`view /event 1`
 **View events of member** | `view /member MEMBER_INDEX` <br> e.g.`view /member 1`
 **Create an event** | `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]` <br> e.g.`create /event n/Party l/Raffles Hall d/16-09-2023`
