@@ -246,6 +246,8 @@ Action | Format, Examples
 **Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
 **List all members** | `list /member`
 **List all events** | `list /event`
+**Create an event** | `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]` <br> e.g.`create /event n/Party l/Raffles Hall d/16-09-2023`
+**Delete an event** | `delete /event EVENT_INDEX` <br> e.g.`delete /event 1`
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
