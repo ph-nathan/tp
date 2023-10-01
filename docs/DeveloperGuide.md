@@ -327,6 +327,23 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+**Use case : UC03 - List all events**
+
+**MSS**
+
+1. User requests to list all events
+2. CCACommander lists all events in the CCA
+
+   Use case ends.
+
+**Extensions**
+
+* 1a. The list of all events is empty.
+
+    * 1a1. CCACommander shows an empty event list.
+
+      Use case ends.
+
 *{More to be added}*
 
 ### Non-Functional Requirements
