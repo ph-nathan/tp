@@ -103,6 +103,19 @@ Examples:
 * `view /event 1` displays members of the 1st event in the event list.
 * `view /event 10` displays members of the 10th event in the event list.
 
+### View Events of Member : `view /member`
+
+Lists all the events of a specified member index.
+
+Format: `view /member MEMBER_INDEX`
+* Views the events of the member at the specified `MEMBER_INDEX`.
+* The index refers to the index number shown in the displayed member list.
+* The index **must be a positive integer** that is within the range of the length of the member list.
+
+Examples:
+* `view /member 1` displays members of the 1st member in the member list.
+* `view /member 10` displays members of the 10th member in the member list.
+
 ### Create an Event : `create /event`
 
 Creates a new event and adds it to the database.
