@@ -3,7 +3,7 @@ layout: page
 title: User Guide
 ---
 
-AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized for use via a Command Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps.
+CCACommander Ultra Promax Xtra 9000PLUS is the one stop app for CCA Heads to manage CCA members and events, optimised for CCA Heads who prefer to use command line interface.
 
 * Table of Contents
 {:toc}
@@ -14,11 +14,11 @@ AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized fo
 
 1. Ensure you have Java `11` or above installed in your Computer.
 
-1. Download the latest `addressbook.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
+1. Download the latest `ccacommander.jar` from [here](https://github.com/AY2324S1-CS2103T-F11-1/tp/releases).
 
-1. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
+1. Copy the file to the folder you want to use as the _home folder_ for your CCACommander application.
 
-1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar addressbook.jar` command to run the application.<br>
+1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar ccacommander.jar` command to run the application.<br>
    A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/Ui.png)
 
@@ -63,9 +63,39 @@ AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized fo
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
 </div>
 
+### Delete a Member : `delete /member`
+
+Deletes the member at the specified index.
+
+Format: `delete /member MEMBER_INDEX`
+
+* Deletes the member at the specified `MEMBER_INDEX`.
+* The index refers to the index number shown in the displayed member list.
+* The index **must be a positive integer** that is within the range of the length of the member list.
+
+Examples:
+* `delete /member 1 ` deletes the 1st member in the member list.
+* `delete /member 10 ` deletes the 10th member in the member list.
+
+
+### List all Members : `list /member`
+
+List all members in the CCA.
+
+Format: `list /member`
+
+### List all Events : `list /event`
+
+List all events hosted by the CCA
+
+Format: `list /event`
+
+
+
+## FEATURES FROM AB3 (START)
 ### Viewing help : `help`
 
-Shows a message explaning how to access the help page.
+Shows a message explaining how to access the help page.
 
 ![help message](images/helpMessage.png)
 
@@ -168,6 +198,8 @@ If your changes to the data file makes its format invalid, AddressBook will disc
 ### Archiving data files `[coming in v2.0]`
 
 _Details coming soon ..._
+## FEATURES FROM AB3 (END)
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -188,6 +220,9 @@ _Details coming soon ..._
 
 Action | Format, Examples
 --------|------------------
+**Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
+**List all members** | `list /member`
+**List all events** | `list /event`
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
