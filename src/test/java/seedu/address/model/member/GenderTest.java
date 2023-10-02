@@ -37,21 +37,21 @@ public class GenderTest {
 
     @Test
     public void equals() {
-        Gender Gender = new Gender("Male");
+        Gender gender = new Gender("Male");
 
         // same values -> returns true
-        assertTrue(Gender.equals(new Gender("Male")));
+        assertTrue(gender.equals(new Gender("Male")));
 
         // same object -> returns true
-        assertTrue(Gender.equals(Gender));
+        assertTrue(gender.equals(gender));
 
         // null -> returns false
-        assertFalse(Gender.equals(null));
+        assertFalse(gender.equals(null));
 
         // different types -> returns false
-        assertFalse(Gender.equals(5.0f));
+        assertFalse(gender.equals(5.0f));
 
         // different values -> returns false
-        assertFalse(Gender.equals(new Gender("Others")));
+        assertFalse(gender.equals(new Gender("Others")));
     }
 }
