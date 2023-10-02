@@ -364,16 +364,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    Use case ends.
 
 **Extensions**
+* 1a. The given index is invalid.
 
-* 1a. The list of members in the event is empty.
-
-    * 2a1. CCACommander shows an empty member list.
-
-      Use case ends.
-
-* 3a. The given index is invalid.
-
-    * 3a1. CCACommander shows an error message.
+    * 1a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
 
@@ -391,16 +384,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    Use case ends.
 
 **Extensions**
+* 1a. The given index is invalid.
 
-* 1a. The list of events of the member is empty.
-
-    * 2a1. CCACommander shows an empty event list.
-
-      Use case ends.
-
-* 3a. The given index is invalid.
-
-    * 3a1. CCACommander shows an error message.
+    * 1a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
 
