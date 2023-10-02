@@ -392,6 +392,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     * 3a1. CCACommander shows an error message.
 
+      Use case resumes at step 2.
 
 **Use case: UC06 - Create an event**
 
