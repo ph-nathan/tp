@@ -430,12 +430,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **Extensions**
 
-* 2a. The list of all events is empty.
-
-    * 2a1. CCACommander shows an error message.
-
-      Use case ends.
-
 * 3a. The given index is invalid.
 
     * 3a1. CCACommander shows an error message.
