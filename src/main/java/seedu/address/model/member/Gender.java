@@ -29,9 +29,9 @@ public class Gender {
      * Returns if a given string is a valid email.
      */
     public static boolean isValidGender(String test) {
-        return test.equals("Male") ||
-                test.equals("Female") ||
-                test.equals("Others");
+        return test.equals("Male")
+                || test.equals("Female")
+                || test.equals("Others");
     }
 
     @Override
