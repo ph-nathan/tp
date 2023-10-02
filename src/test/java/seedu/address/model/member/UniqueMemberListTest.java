@@ -24,23 +24,23 @@ public class UniqueMemberListTest {
     private final UniqueMemberList uniqueMemberList = new UniqueMemberList();
 
     @Test
-    public void contains_nullPerson_throwsNullPointerException() {
+    public void contains_nullMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.contains(null));
     }
 
     @Test
-    public void contains_personNotInList_returnsFalse() {
+    public void contains_memberNotInList_returnsFalse() {
         assertFalse(uniqueMemberList.contains(ALICE));
     }
 
     @Test
-    public void contains_personInList_returnsTrue() {
+    public void contains_memberInList_returnsTrue() {
         uniqueMemberList.add(ALICE);
         assertTrue(uniqueMemberList.contains(ALICE));
     }
 
     @Test
-    public void contains_personWithSameIdentityFieldsInList_returnsTrue() {
+    public void contains_memberWithSameIdentityFieldsInList_returnsTrue() {
         uniqueMemberList.add(ALICE);
         Member editedAlice = new MemberBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
                 .build();
@@ -48,33 +48,33 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void add_nullPerson_throwsNullPointerException() {
+    public void add_nullMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.add(null));
     }
 
     @Test
-    public void add_duplicatePerson_throwsDuplicatePersonException() {
+    public void add_duplicateMember_throwsDuplicatePersonException() {
         uniqueMemberList.add(ALICE);
         assertThrows(DuplicateMemberException.class, () -> uniqueMemberList.add(ALICE));
     }
 
     @Test
-    public void setPerson_nullTargetPerson_throwsNullPointerException() {
+    public void setPerson_nullTargetMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.setMember(null, ALICE));
     }
 
     @Test
-    public void setPerson_nullEditedPerson_throwsNullPointerException() {
+    public void setPerson_nullEditedMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.setMember(ALICE, null));
     }
 
     @Test
-    public void setPerson_targetPersonNotInList_throwsPersonNotFoundException() {
+    public void setPerson_targetMemberNotInList_throwsMemberNotFoundException() {
         assertThrows(MemberNotFoundException.class, () -> uniqueMemberList.setMember(ALICE, ALICE));
     }
 
     @Test
-    public void setPerson_editedPersonIsSamePerson_success() {
+    public void setMember_editedMemberIsSameMember_success() {
         uniqueMemberList.add(ALICE);
         uniqueMemberList.setMember(ALICE, ALICE);
         UniqueMemberList expectedUniqueMemberList = new UniqueMemberList();
@@ -83,7 +83,7 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void setPerson_editedPersonHasSameIdentity_success() {
+    public void setMember_editedMemberHasSameIdentity_success() {
         uniqueMemberList.add(ALICE);
         Member editedAlice = new MemberBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
                 .build();
@@ -94,7 +94,7 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void setPerson_editedPersonHasDifferentIdentity_success() {
+    public void setMember_editedMemberHasDifferentIdentity_success() {
         uniqueMemberList.add(ALICE);
         uniqueMemberList.setMember(ALICE, BOB);
         UniqueMemberList expectedUniqueMemberList = new UniqueMemberList();
@@ -103,24 +103,24 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void setPerson_editedPersonHasNonUniqueIdentity_throwsDuplicatePersonException() {
+    public void setMember_editedMemberHasNonUniqueIdentity_throwsDuplicateMemberException() {
         uniqueMemberList.add(ALICE);
         uniqueMemberList.add(BOB);
         assertThrows(DuplicateMemberException.class, () -> uniqueMemberList.setMember(ALICE, BOB));
     }
 
     @Test
-    public void remove_nullPerson_throwsNullPointerException() {
+    public void remove_nullMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.remove(null));
     }
 
     @Test
-    public void remove_personDoesNotExist_throwsPersonNotFoundException() {
+    public void remove_memberDoesNotExist_throwsMemberNotFoundException() {
         assertThrows(MemberNotFoundException.class, () -> uniqueMemberList.remove(ALICE));
     }
 
     @Test
-    public void remove_existingPerson_removesPerson() {
+    public void remove_existingMember_removesMember() {
         uniqueMemberList.add(ALICE);
         uniqueMemberList.remove(ALICE);
         UniqueMemberList expectedUniqueMemberList = new UniqueMemberList();
@@ -128,12 +128,12 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void setPersons_nullUniquePersonList_throwsNullPointerException() {
+    public void setMembers_nullUniqueMemberList_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.setMembers((UniqueMemberList) null));
     }
 
     @Test
-    public void setPersons_uniquePersonList_replacesOwnListWithProvidedUniquePersonList() {
+    public void setMembers_uniqueMemberList_replacesOwnListWithProvidedUniqueMemberList() {
         uniqueMemberList.add(ALICE);
         UniqueMemberList expectedUniqueMemberList = new UniqueMemberList();
         expectedUniqueMemberList.add(BOB);
@@ -142,12 +142,12 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void setPersons_nullList_throwsNullPointerException() {
+    public void setMembers_nullList_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.setMembers((List<Member>) null));
     }
 
     @Test
-    public void setPersons_list_replacesOwnListWithProvidedList() {
+    public void setMembers_list_replacesOwnListWithProvidedList() {
         uniqueMemberList.add(ALICE);
         List<Member> memberList = Collections.singletonList(BOB);
         uniqueMemberList.setMembers(memberList);
@@ -157,7 +157,7 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void setPersons_listWithDuplicatePersons_throwsDuplicatePersonException() {
+    public void setMembers_listWithDuplicateMembers_throwsDuplicateMembersException() {
         List<Member> listWithDuplicateMembers = Arrays.asList(ALICE, ALICE);
         assertThrows(DuplicateMemberException.class, () -> uniqueMemberList.setMembers(listWithDuplicateMembers));
     }
