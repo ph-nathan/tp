@@ -377,7 +377,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-**Use case: UC04 - View events of member**
+**Use case: UC05 - View events of member**
 
 **Guarantees: MSS -> All events of the specified member will be listed.**
 
