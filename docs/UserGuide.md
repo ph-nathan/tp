@@ -25,15 +25,11 @@ CCACommander Ultra Promax Xtra 9000PLUS is the one stop app for CCA Heads to man
 1. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
    Some example commands you can try:
 
-   * `list` : Lists all contacts.
+   * `list` : Lists all members and events.
 
-   * `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to the Address Book.
+   * `create /member n/CHU WEI RONG g/Male p/98765432 e/chuweirongrocks@gmail.com a/19 Kent Ridge Crescent, Singapore 119278` : Creates a member named `CHU WEI RONG` to CCACommander.
 
-   * `delete 3` : Deletes the 3rd contact shown in the current list.
-
-   * `clear` : Deletes all contacts.
-
-   * `exit` : Exits the app.
+   * `delete /member 3` : Deletes the 3rd member shown in the current list.
 
 1. Refer to the [Features](#features) below for details of each command.
 
@@ -63,6 +59,14 @@ CCACommander Ultra Promax Xtra 9000PLUS is the one stop app for CCA Heads to man
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
 </div>
 
+### Create a member: `create /member`
+Creates a new member with accompanying personal details (name, phone number, email address, home address).
+
+Format: `create /member n/MEMBER_NAME g/GENDER [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]`
+
+* Acceptable values for `GENDER`: `Male`, `Female`, `Others`
+* Acceptable values for `EMAIL`: A string with an email extension (e.g. `@gmail.com`)
+
 ### Delete a Member : `delete /member`
 
 Deletes the member at the specified index.
@@ -76,7 +80,6 @@ Format: `delete /member MEMBER_INDEX`
 Examples:
 * `delete /member 1 ` deletes the 1st member in the member list.
 * `delete /member 10 ` deletes the 10th member in the member list.
- 
 
 ### List all Members and all Events : `list`
 
@@ -263,16 +266,13 @@ _Details coming soon ..._
 
 Action | Format, Examples
 --------|------------------
+**Create a member** | `create /member n/MEMBER_NAME g/GENDER [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]` <br> e.g. `create /member n/CHU WEI RONG g/Male p/98765432 e/chuweirongrocks@gmail.com a/19 Kent Ridge Crescent, Singapore 119278`
 **Delete a member** | `delete /member MEMBER_INDEX` <br> e.g.`delete /member 1`
 **List all members and all events** | `list`
 **View members of event** | `view /event EVENT_INDEX` <br> e.g.`view /event 1`
 **View events of member** | `view /member MEMBER_INDEX` <br> e.g.`view /member 1`
 **Create an event** | `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]` <br> e.g.`create /event n/Party l/Raffles Hall d/16-09-2023`
 **Delete an event** | `delete /event EVENT_INDEX` <br> e.g.`delete /event 1`
-**Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
-**Clear** | `clear`
-**Delete** | `delete INDEX`<br> e.g., `delete 3`
-**Edit** | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
-**Find** | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`
-**List** | `list`
-**Help** | `help`
+**Edit** | coming soon...
+**Find** | coming soon...
+**Help** | coming soon...
