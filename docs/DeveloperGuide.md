@@ -354,6 +354,45 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+**Use case: UC04 - View members of event**
+
+**Guarantees: MSS -> All members of the specified event will be listed.**
+
+**MSS**
+
+1. User requests to <ins>list all events</ins> (UC03)
+2. CCACommander shows a list of all events
+3. User requests to view a specific event in the list of all events
+4. CCACommander displays all members of the specified event
+
+   Use case ends.
+
+**Extensions**
+* 1a. The given index is invalid.
+
+    * 1a1. CCACommander shows an error message.
+
+      Use case resumes at step 2.
+
+**Use case: UC05 - View events of member**
+
+**Guarantees: MSS -> All events of the specified member will be listed.**
+
+**MSS**
+
+1. User requests to <ins>list all members</ins> (UC02)
+2. CCACommander shows a list of all members
+3. User requests to view a specific member in the list of all members
+4. CCACommander displays all events of the specified member
+
+   Use case ends.
+
+**Extensions**
+* 1a. The given index is invalid.
+
+    * 1a1. CCACommander shows an error message.
+
+
 **Use case: UC06 - Create an event**
 
 **Guarantees: MSS -> Entered event will be added.**
@@ -407,8 +446,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 ### Non-Functional Requirements
 
 1.  Should work on any _mainstream OS_ as long as it has Java `11` or above installed.
-2.  Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
-3.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
+2.  Should be able to hold up to 1000 members without a noticeable sluggishness in performance for typical usage.
+3.  Should be able to hold up to 1000 events without a noticeable sluggishness in performance for typical usage.
+4.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
 
 *{More to be added}*
 
