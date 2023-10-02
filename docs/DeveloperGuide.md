@@ -350,6 +350,31 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
+**Use case: UC04 - View members of event**
+
+**Guarantees: MSS -> All members of the specified event will be listed.**
+
+**MSS**
+
+1. User requests to <ins>list all events</ins> (UC03)
+2. CCACommander shows a list of all events
+3. User requests to view a specific event in the list of all events
+4. CCACommander displays all members of the specified event
+
+   Use case ends.
+
+**Extensions**
+
+* 1a. The list of members in the event is empty.
+
+    * 2a1. CCACommander shows an empty member list.
+
+      Use case ends.
+
+* 3a. The given index is invalid.
+
+    * 3a1. CCACommander shows an error message.
+
 *{More to be added}*
 
 ### Non-Functional Requirements
