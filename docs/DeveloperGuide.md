@@ -278,10 +278,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 | `* * *`  | beginner user | add a new event hosted by the CCA           | I can keep track of upcoming activities                                            |
 | `* * *`  | power user    | delete an event                             | I can remove it from the schedule.                                                 |
 | `* * *`  | power user    | view a list of all events hosted by the CCA | I can see event history                                                            |
-| `* *`    | beginner user | add a member to an event                    | I can track which members are participating in the event.                          |
-| `* *`    | beginner user | remove a member from an event               | I can amend adding the wrong person to an event.                                   |
-| `* *`    | beginner user | view the members who attended an event      | I can estimate the number of members who will attend similar events in the future. |
-| `* *`    | beginner user | view events of a member                     | I can check how involved that particular member is.                                |
+| `* * *`  | beginner user | add a member to an event                    | I can track which members are participating in the event.                          |
+| `* * *`  | beginner user | remove a member from an event               | I can amend adding the wrong person to an event.                                   |
+| `* * *`  | beginner user | view the members who attended an event      | I can estimate the number of members who will attend similar events in the future. |
+| `* * *`  | beginner user | view events of a member                     | I can check how involved that particular member is.                                |
 
 *{More to be added}*
 
