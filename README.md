@@ -10,9 +10,11 @@
 ### Features
 1. Add and delete members
 2. Add and delete events
-3. List events and members
-4. Add member to event
-5. Delete member from event
+3. List all events and members
+4. List events of member
+5. List members of event
+6. Add member to event
+7. Delete member from event
 
 ### Links
 * [Project Website](https://ay2324s1-cs2103t-f11-1.github.io/tp/)
