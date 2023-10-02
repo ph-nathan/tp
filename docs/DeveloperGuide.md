@@ -270,20 +270,24 @@ _{Explain here how the data archiving feature will be implemented}_
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                                    | I want to …​                     | So that I can…​                                                        |
-| -------- | ------------------------------------------ | ------------------------------ | ---------------------------------------------------------------------- |
-| `* * *`  | new user                                   | see usage instructions         | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person               |                                                                        |
-| `* * *`  | user                                       | delete a person                | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name          | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details   | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name           | locate a person easily                                                 |
+| Priority | As a …​       | I can …​                                    | So that …​                                                                         |
+|----------|---------------|---------------------------------------------|------------------------------------------------------------------------------------|
+| `* * *`  | beginner user | create a new profile of a CCA member        | I can keep track of their information                                              |
+| `* * *`  | power user    | delete the profile of a CCA member          | I can remove them from the system when needed                                      |
+| `* * *`  | beginner user | list all members in my CCA                  | I can keep track of my CCA strength                                                |
+| `* * *`  | beginner user | add a new event hosted by the CCA           | I can keep track of upcoming activities                                            |
+| `* * *`  | power user    | delete an event                             | I can remove it from the schedule.                                                 |
+| `* * *`  | power user    | view a list of all events hosted by the CCA | I can see event history                                                            |
+| `* * *`  | beginner user | add a member to an event                    | I can track which members are participating in the event.                          |
+| `* * *`  | beginner user | remove a member from an event               | I can amend adding the wrong person to an event.                                   |
+| `* * *`  | beginner user | view the members who attended an event      | I can estimate the number of members who will attend similar events in the future. |
+| `* * *`  | beginner user | view events of a member                     | I can check how involved that particular member is.                                |
 
 *{More to be added}*
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `CCACommander` and the **Actor** is the `user`, unless specified otherwise)
 
 **Use case: UC01 - Delete a member**
 
@@ -302,9 +306,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 * 2a. The list of all members is empty.
 
-  * 2a1. CCACommander shows an error message.
+    * 2a1. CCACommander shows an error message.
 
-    Use case ends.
+      Use case ends.
 
 * 3a. The given index is invalid.
 
@@ -364,9 +368,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    Use case ends.
 
 **Extensions**
-* 1a. The given index is invalid.
+* 3a. The given index is invalid.
 
-    * 1a1. CCACommander shows an error message.
+    * 3a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
 
@@ -384,9 +388,51 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
    Use case ends.
 
 **Extensions**
-* 1a. The given index is invalid.
+* 3a. The given index is invalid.
 
-    * 1a1. CCACommander shows an error message.
+    * 3a1. CCACommander shows an error message.
+
+      Use case resumes at step 2.
+
+**Use case: UC06 - Create an event**
+
+**Guarantees: MSS -> Entered event will be added.**
+
+**MSS**
+
+1.  User requests to add an event to the list
+2.  CCACommander adds that event to the event list and displays the event added
+
+* 1a. User uses the command incorrectly
+
+    * 1a1. CCACommander shows an error message
+
+      Use case ends.
+  
+* 1b. The entered event already exists
+
+    * 1b1. CCACommander shows an error message
+
+      Use case ends.
+
+**Use case: UC07 - Delete an event**
+
+**Guarantees: MSS -> Specified event will be deleted.**
+
+**MSS**
+
+1.  User <ins>lists all events</ins> (UC02)
+2.  CCACommander shows a list of all events
+3.  User requests to delete a specific event in the list of all events
+4.  CCACommander deletes the specific event
+
+    Use case ends.
+
+**Extensions**
+
+* 3a. The given index is invalid.
+
+    * 3a1. CCACommander shows an error message.
 
       Use case resumes at step 2.
 
@@ -397,7 +443,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 1.  Should work on any _mainstream OS_ as long as it has Java `11` or above installed.
 2.  Should be able to hold up to 1000 members without a noticeable sluggishness in performance for typical usage.
 3.  Should be able to hold up to 1000 events without a noticeable sluggishness in performance for typical usage.
-4A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
+4.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
 
 *{More to be added}*
 
