@@ -304,17 +304,13 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **Extensions**
 
-* 2a. The list of all members is empty.
-
-    * 2a1. CCACommander shows an error message.
-
-      Use case ends.
-
 * 3a. The given index is invalid.
 
-    * 3a1. CCACommander shows an error message.
+    * 3a1. CCACommander shows an error message and requests for a valid index from the user.
+    * 3a2. User enters new index. 
+    * Steps 3a1-3a2 are repeated until index given by the user is correct.
 
-      Use case resumes at step 2.
+      Use case resumes at step 4.
 
 **Use case : UC02 - List all members**
 
@@ -327,14 +323,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
    Use case ends.
 
-**Extensions**
-
-* 1a. The list of all members is empty.
-
-    * 1a1. CCACommander shows an empty member list.
-
-      Use case ends.
-
 **Use case : UC03 - List all events**
 
 **Guarantees: MSS -> All events will be listed.**
@@ -345,14 +333,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 2. CCACommander lists all events in the CCA
 
    Use case ends.
-
-**Extensions**
-
-* 1a. The list of all events is empty.
-
-    * 1a1. CCACommander shows an empty event list.
-
-      Use case ends.
 
 **Use case: UC04 - View members of event**
 
