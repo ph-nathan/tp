@@ -313,7 +313,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User requests to <ins>list all members</ins> (UC02).
+1. User requests to <ins>list all members</ins> (UC03).
 2. CCACommander shows a list of all members.
 3. User requests to delete a specific member in the list of all members.
 4. CCACommander deletes the specific member.
@@ -378,7 +378,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User requests to <ins>list all events</ins> (UC03).
+1. User requests to <ins>list all events</ins> (UC04).
 2. CCACommander shows a list of all events.
 3. User requests to view a specific event in the list of all events.
 4. CCACommander displays all members of the specified event.
@@ -398,7 +398,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User requests to <ins>list all members</ins> (UC02).
+1. User requests to <ins>list all members</ins> (UC03).
 2. CCACommander shows a list of all members.
 3. User requests to view a specific member in the list of all members.
 4. CCACommander displays all events of the specified member.
@@ -442,7 +442,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1.  User <ins>lists all events</ins> (UC02).
+1.  User <ins>lists all events</ins> (UC04).
 2.  CCACommander shows a list of all events.
 3.  User requests to delete a specific event in the list of all events.
 4.  CCACommander deletes the specific event.
