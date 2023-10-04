@@ -43,12 +43,11 @@ We are a team based in the [School of Computing, National University of Singapor
 * Role: Developer
 * Responsibilities: Deliverables and deadlines
 
-### James Doe
+### Pham Quang Nhat
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/ph-nathan.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/ph-nathan.md)]
+[[github](http://github.com/ph-nathan)] [[portfolio](team/ph-nathan.md)] [[email](mailto:e0960490@nus.edu.sg)]
 
 * Role: Developer
 * Responsibilities: UI
