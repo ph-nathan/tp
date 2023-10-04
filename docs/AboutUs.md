@@ -9,7 +9,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Ang Jing Xuan Selwyn
 
-<img src="images/members/selwynang.png" width="200px">
+<img src="images/selwynang.png" width="200px">
 
 [[github](https://github.com/SelwynAng)] [[portfolio](team/selwynang.md)] [[email](mailto:selwyn.ang@u.nus.edu)]
 
@@ -18,7 +18,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Andre Chua Kai Jun
 
-<img src="images/members/andrechuakj.png" width="200px">
+<img src="images/andrechuakj.png" width="200px">
 
 [[github](http://github.com/andrechuakj)] [[portfolio](team/andrechuakj.md)] [[email](mailto:andre.chua@u.nus.edu)]
 
@@ -27,7 +27,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Chu Wei Rong
 
-<img src="images/members/wr1159.png" width="200px">
+<img src="images/wr1159.png" width="200px">
 
 [[github](http://github.com/wr1159)] [[portfolio](team/wr1159.md)] [[email](mailto:chuweirong@u.nus.edu)]
 
@@ -36,7 +36,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Kaw Jun Rei Dylan
 
-<img src="images/members/dylkaw.png" width="200px">
+<img src="images/dylkaw.png" width="200px">
 
 [[github](http://github.com/dylkaw)] [[portfolio](team/dylkaw.md)] [[email](mailto:dylankaw@nus.edu.sg)]
 
@@ -45,7 +45,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Pham Quang Nhat 
 
-<img src="images/members/ph-nathan.png" width="200px">
+<img src="images/ph-nathan.png" width="200px">
 
 [[github](http://github.com/ph-nathan)] [[portfolio](team/ph-nathan.md)] [[email](mailto:e0960490@nus.edu.sg)]
 
