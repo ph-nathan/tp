@@ -289,7 +289,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `CCACommander` and the **Actor** is the `user`, unless specified otherwise)
 
-**<ins>Use case: UC01 - Delete a member**
+<ins>**Use case: UC01 - Delete a member**</ins>
 
 **Guarantees: MSS -> Specified member will be deleted.**
 
@@ -312,7 +312,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 4.
 
-**<ins>Use case : UC02 - List all members**
+<ins>**Use case : UC02 - List all members**</ins>
 
 **Guarantees: MSS -> All members will be listed.**
 
@@ -323,7 +323,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
    Use case ends.
 
-**<ins>Use case : UC03 - List all events**
+<ins>**Use case : UC03 - List all events**</ins>
 
 **Guarantees: MSS -> All events will be listed.**
 
@@ -334,7 +334,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
    Use case ends.
 
-**<ins>Use case: UC04 - View members of event**
+<ins>**Use case: UC04 - View members of event**</ins>
 
 **Guarantees: MSS -> All members of the specified event will be listed.**
 
@@ -354,7 +354,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-**<ins>Use case: UC05 - View events of member**
+<ins>**Use case: UC05 - View events of member**</ins>
 
 **Guarantees: MSS -> All events of the specified member will be listed.**
 
@@ -374,7 +374,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-**<ins>Use case: UC06 - Create an event**
+<ins>**Use case: UC06 - Create an event**</ins>
 
 **Guarantees: MSS -> Entered event will be added.**
 
@@ -396,7 +396,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
-**<ins>Use case: UC07 - Delete an event**
+<ins>**Use case: UC07 - Delete an event**</ins>
 
 **Guarantees: MSS -> Specified event will be deleted.**
 
@@ -409,7 +409,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
-**<ins>Use case: UC08 - Add member to an event**
+<ins>**Use case: UC08 - Add member to an event**</ins>
 
 **Guarantees: MSS -> Specified member will be added to the event.**
 
@@ -437,7 +437,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
-**<ins>Use case: UC09 - Delete member from an event**
+<ins>**Use case: UC09 - Delete member from an event**</ins>
 
 **Guarantees: MSS -> Specified member will be deleted from the event.**
 **MSS**
