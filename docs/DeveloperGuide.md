@@ -289,7 +289,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `CCACommander` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: UC01 - Delete a member**
+**<ins>Use case: UC01 - Delete a member**
 
 **Guarantees: MSS -> Specified member will be deleted.**
 
@@ -312,7 +312,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 4.
 
-**Use case : UC02 - List all members**
+**<ins>Use case : UC02 - List all members**
 
 **Guarantees: MSS -> All members will be listed.**
 
@@ -323,7 +323,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
    Use case ends.
 
-**Use case : UC03 - List all events**
+**<ins>Use case : UC03 - List all events**
 
 **Guarantees: MSS -> All events will be listed.**
 
@@ -334,7 +334,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
    Use case ends.
 
-**Use case: UC04 - View members of event**
+**<ins>Use case: UC04 - View members of event**
 
 **Guarantees: MSS -> All members of the specified event will be listed.**
 
@@ -354,7 +354,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-**Use case: UC05 - View events of member**
+**<ins>Use case: UC05 - View events of member**
 
 **Guarantees: MSS -> All events of the specified member will be listed.**
 
@@ -374,7 +374,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-**Use case: UC06 - Create an event**
+**<ins>Use case: UC06 - Create an event**
 
 **Guarantees: MSS -> Entered event will be added.**
 
@@ -383,6 +383,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 1.  User requests to add an event to the list
 2.  CCACommander adds that event to the event list and displays the event added
 
+**Extensions**
 * 1a. User uses the command incorrectly
 
     * 1a1. CCACommander shows an error message
@@ -395,7 +396,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
-**Use case: UC07 - Delete an event**
+**<ins>Use case: UC07 - Delete an event**
 
 **Guarantees: MSS -> Specified event will be deleted.**
 
@@ -408,15 +409,61 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
+**<ins>Use case: UC08 - Add member to an event**
+
+**Guarantees: MSS -> Specified member will be added to the event.**
+
+**MSS**
+
+1. User <ins>lists all members</ins> (UC02)
+2. CCACommander shows a list of all members
+3. User <ins>lists all events</ins> (UC03) 
+4. CCACommander shows a list of all events
+5. User requests to add a specific member in the list of all members to a specific event in the list of all events
+6. CCACommander adds the specified member from the specified event
+
 **Extensions**
 
-* 3a. The given index is invalid.
+* 5a. The given index is invalid.
 
-    * 3a1. CCACommander shows an error message and requests for a valid index from the user.
-    * 3a2. User enters new index.
-    * Steps 3a1-3a2 are repeated until index given by the user is correct.
+    * 5a1. CCACommander shows an error message and requests for a valid index from the user.
+    * 5a2. User enters new index.
+    * Steps 5a1-5a2 are repeated until index given by the user is correct.
 
-      Use case resumes at step 4.
+      Use case resumes at step 6. 
+* 5b. The specified member is already added to the event.
+
+    * 5b1. CCACommander shows an error message saying member is already in event.
+
+      Use case ends.
+
+**<ins>Use case: UC09 - Delete member from an event**
+
+**Guarantees: MSS -> Specified member will be deleted from the event.**
+**MSS**
+
+1. User <ins>lists all members</ins> (UC02)
+2. CCACommander shows a list of all members
+3. User <ins>lists all events</ins> (UC03)
+4. CCACommander shows a list of all events
+5. User requests to delete a specific member in the list of all members to a specific event in the list of all events
+6. CCACommander deletes the specified member to the specified event
+    Use case ends.
+
+**Extensions**
+
+* 5a. The given index is invalid.
+
+    * 5a1. CCACommander shows an error message and requests for a valid index from the user.
+    * 5a2. User enters new index.
+    * Steps 5a1-5a2 are repeated until index given by the user is correct.
+
+      Use case resumes at step 6.
+* 5b. The specified member is not in the event.
+
+    * 5b1. CCACommander shows an error message saying member is not in event.
+
+      Use case ends.
 
 *{More to be added}*
 
