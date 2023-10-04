@@ -48,7 +48,7 @@ We are a team based in the [School of Computing, National University of Singapor
 <img src="images/johndoe.png" width="200px">
 
 [[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[portfolio](team/ph-nathan.md)]
 
 * Role: Developer
 * Responsibilities: UI
