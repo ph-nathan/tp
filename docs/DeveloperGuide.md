@@ -58,7 +58,7 @@ The *Sequence Diagram* below shows how the components interact with each other f
 Each of the four main components (also shown in the diagram above),
 
 * defines its *API* in an `interface` with the same name as the Component.
-* implements its functionality using a concrete `{Component Name}Manager` class (which follows the corresponding API `interface` mentioned in the previous point.
+* implements its functionality using a concrete `{Component Name}Manager` class (which follows the corresponding API `interface` mentioned in the previous point).
 
 For example, the `Logic` component defines its API in the `Logic.java` interface and implements its functionality using the `LogicManager.java` class which follows the `Logic` interface. Other components interact with a given component through its interface rather than the concrete class (reason: to prevent outside component's being coupled to the implementation of a component), as illustrated in the (partial) class diagram below.
 
@@ -478,8 +478,20 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Glossary
 
-* **Mainstream OS**: Windows, Linux, Unix, OS-X
-* **Private contact detail**: A contact detail that is not meant to be shared with others
+* **CCA**: Co-Curricular Activities
+* **CLI**: Command Line Interface  
+* **Data archiving**: A feature related to data storage and archiving
+* **Event**: An activity entity of the application 
+* **Extensions**: Variations or deviations from the main success scenario in a use case
+* **GUI**: Graphical User Interface
+* **Jar file**: A Java Archive file used to distribute and run Java applications
+* **Mainstream OS**: Windows, Linux, Unix, OS-X 
+* **Member**: An individual entity of the application
+* **MSS**: Main Success Scenario
+* **Non-Functional Requirements**: Constraints under which system is developed and operated
+* **PlantUML**: The tool or language used for creating diagrams in your documentation
+* **Sequence Diagram**: A type of diagram used to visualize the sequence of interactions between components or objects
+
 
 --------------------------------------------------------------------------------------------------------------------
 
