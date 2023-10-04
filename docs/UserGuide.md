@@ -143,9 +143,9 @@ Adds a member to an event.
 
 Format: `add /member MEMBER_INDEX /event EVENT_INDEX`
 
-* Add the member at the specified `MEMBER_INDEX` to the event at the specified `EVENT_INDEX`.
-* The member/event index refers to the index number shown in the displayed member/event list.
-* The member/event index **must be a positive integer** that is within the range of the length of the member/event list.
+* Adds the member at the specified `MEMBER_INDEX` to the event at the specified `EVENT_INDEX`.
+* The `MEMBER_INDEX`/`EVENT_INDEX` refers to the index number shown in the displayed member/event list.
+* The `MEMBER_INDEX`/`EVENT_INDEX` **must be a positive integer** that is within the range of the length of the member/event list.
 
 Examples:
 * `add /member 1 /event 5` adds the 1st member in the member list to the 5th event in the event list.
