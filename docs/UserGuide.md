@@ -2,7 +2,7 @@
 layout: page
 title: User Guide
 ---
-
+## CCACommander Ultra Promax Xtra 9000PLUS - User Guide
 CCACommander Ultra Promax Xtra 9000PLUS is the one stop app for CCA Heads to manage CCA members and events, optimised for CCA Heads who prefer to use command line interface.
 
 * Table of Contents
@@ -59,7 +59,7 @@ CCACommander Ultra Promax Xtra 9000PLUS is the one stop app for CCA Heads to man
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
 </div>
 
-### Create a member: `create /member`
+### Create a Member: `create /member`
 Creates a new member with accompanying personal details (name, phone number, email address, home address).
 
 Format: `create /member n/MEMBER_NAME g/GENDER [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]`
@@ -137,6 +137,35 @@ Examples:
 * `delete /event 1 ` deletes the 1st event in the event list.
 * `delete /event 10 ` deletes the 10th event in the event list.
 
+### Add Member to an Event: `add /member /event`
+
+Adds a member to an event. 
+
+Format: `add /member MEMBER_INDEX /event EVENT_INDEX`
+
+* Adds the member at the specified `MEMBER_INDEX` to the event at the specified `EVENT_INDEX`.
+* The `MEMBER_INDEX`/`EVENT_INDEX` refers to the index number shown in the displayed member/event list.
+* The `MEMBER_INDEX`/`EVENT_INDEX` **must be a positive integer** that is within the range of the length of the member/event list.
+
+Examples:
+* `add /member 1 /event 5` adds the 1st member in the member list to the 5th event in the event list.
+* `add /member 5 /event 1` adds the 5th member in the member list to the 1st event in the event list.
+
+### Delete Member from an Event: `delete /member /event`
+
+Deletes a member from an event.
+
+Format: ` delete /member MEMBER_INDEX /event EVENT_INDEX`
+
+* Delete the member at the specified `MEMBER_INDEX` from the event at the specified `EVENT_INDEX`.
+* The member at `MEMBER_INDEX` must be a part of the event at `EVENT_INDEX`
+* The `MEMBER_INDEX`/`EVENT_INDEX` refers to the index number shown in the displayed member/event list.
+* The `MEMBER_INDEX`/`EVENT_INDEX` **must be a positive integer** that is within the range of the length of the member/event list.
+
+
+Examples:
+* `delete /member 1 /event 5` deletes the 1st member in the member list from the 5th event in the event list.
+* `delete /member 5 /event 1` deletes the 5th member in the member list from the 1st event in the event list.
 
 ## FEATURES FROM AB3 (START)
 ### Viewing help : `help`
@@ -273,6 +302,8 @@ Action | Format, Examples
 **View events of member** | `view /member MEMBER_INDEX` <br> e.g.`view /member 1`
 **Create an event** | `create /event n/EVENT_NAME [l/LOCATION] [d/DATE]` <br> e.g.`create /event n/Party l/Raffles Hall d/16-09-2023`
 **Delete an event** | `delete /event EVENT_INDEX` <br> e.g.`delete /event 1`
+**Add member to an event** | `add /member MEMBER_INDEX /event EVENT_INDEX` <br> e.g.`add /member 1 /event 5`
+**Delete member from an event** | `delete /member MEMBER_INDEX /event EVENT_INDEX` <br> e.g.`delete /member 1 /event 5`
 **Edit** | coming soon...
 **Find** | coming soon...
 **Help** | coming soon...
