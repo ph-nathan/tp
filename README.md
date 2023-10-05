@@ -2,7 +2,7 @@
 
 ![Ui](docs/images/Ui.png)
 
-**CCACommander Ultra Promax Xtra 9000+** frees your mind of having to remember your CCA members and events. It's,
+**CCACommander Ultra Promax Xtra 9000PLUS** frees your mind of having to remember your CCA members and events. It's,
 * text-based
 * easy to learn
 * SUPER FAST to use
@@ -11,8 +11,8 @@
 1. Add and delete members
 2. Add and delete events
 3. List all events and members
-4. List events of member
-5. List members of event
+4. View events of member
+5. View members of event
 6. Add member to event
 7. Delete member from event
 

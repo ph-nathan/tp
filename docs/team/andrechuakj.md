@@ -5,7 +5,7 @@ title: Andre's Project Portfolio Page
 
 ### Project: CCACommander Ultra Promax Xtra 9000PLUS
 
-CCACommander Ultra Promax Xtra 9000PLUS is the one stop app for CCA Heads to manage CCA members and events, optimised for CCA Heads who prefer to use command line interface.
+CCACommander Ultra Promax Xtra 9000PLUS is the one-stop app for CCA Heads to manage CCA members and events, optimised for CCA Heads who prefer to use command line interface.
 
 Given below are my contributions to the project.
 
