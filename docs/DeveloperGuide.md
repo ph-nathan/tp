@@ -270,18 +270,18 @@ _{Explain here how the data archiving feature will be implemented}_
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​       | I can …​                                    | So that …​                                                                         |
-|----------|---------------|---------------------------------------------|------------------------------------------------------------------------------------|
-| `* * *`  | beginner user | create a new profile of a CCA member        | I can keep track of their information                                              |
-| `* * *`  | power user    | delete the profile of a CCA member          | I can remove them from the system when needed                                      |
-| `* * *`  | beginner user | list all members in my CCA                  | I can keep track of my CCA strength                                                |
-| `* * *`  | beginner user | add a new event hosted by the CCA           | I can keep track of upcoming activities                                            |
-| `* * *`  | power user    | delete an event                             | I can remove it from the schedule.                                                 |
-| `* * *`  | power user    | view a list of all events hosted by the CCA | I can see event history                                                            |
-| `* * *`  | beginner user | add a member to an event                    | I can track which members are participating in the event.                          |
-| `* * *`  | beginner user | remove a member from an event               | I can amend adding the wrong person to an event.                                   |
-| `* * *`  | beginner user | view the members who attended an event      | I can estimate the number of members who will attend similar events in the future. |
-| `* * *`  | beginner user | view events of a member                     | I can check how involved that particular member is.                                |
+| Priority | As a …​       | I can …​                                    | So that …​                                                                     |
+|----------|---------------|---------------------------------------------|--------------------------------------------------------------------------------|
+| `* * *`  | beginner user | create a new profile of a CCA member        | I can keep track of their information                                          |
+| `* * *`  | power user    | delete the profile of a CCA member          | I can remove them from the system when needed                                  |
+| `* * *`  | beginner user | list all members in my CCA                  | I can keep track of my CCA strength                                            |
+| `* * *`  | beginner user | add a new event hosted by the CCA           | I can keep track of upcoming activities                                        |
+| `* * *`  | power user    | delete an event                             | I can remove it from the schedule                                              |
+| `* * *`  | power user    | view a list of all events hosted by the CCA | I can see event history                                                        |
+| `* * *`  | beginner user | add a member to an event                    | I can track which members are participating in the event                       |
+| `* * *`  | beginner user | remove a member from an event               | I can amend adding the wrong person to an event                                |
+| `* * *`  | beginner user | view the members who attended an event      | I can estimate the number of members who will attend similar events in the future |
+| `* * *`  | beginner user | view events of a member                     | I can check how involved that particular member is                             |
 
 *{More to be added}*
 
@@ -425,12 +425,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     * 1a1. CCACommander shows an error message.
 
       Use case ends.
-  
-* 1b. The entered event already exists.
-
-    * 1b1. CCACommander shows an error message.
-
-      Use case ends.
 
 <ins>**Use case: UC08 - Delete an event**</ins>
 
@@ -451,12 +445,14 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User <ins>lists all members</ins> (UC03)
-2. CCACommander shows a list of all members
-3. User <ins>lists all events</ins> (UC04) 
-4. CCACommander shows a list of all events
-5. User requests to add a specific member in the list of all members to a specific event in the list of all events
-6. CCACommander adds the specified member from the specified event
+1. User <ins>lists all members</ins> (UC03).
+2. CCACommander shows a list of all members.
+3. User <ins>lists all events</ins> (UC04).
+4. CCACommander shows a list of all events.
+5. User requests to add a specific member in the list of all members to a specific event in the list of all events.
+6. CCACommander adds the specified member from the specified event.
+
+    Use case ends.
 
 **Extensions**
 
@@ -466,7 +462,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     * 5a2. User enters new index.
     * Steps 5a1-5a2 are repeated until index given by the user is correct.
 
-      Use case resumes at step 6. 
+      Use case resumes at step 6.
+
 * 5b. The specified member is already added to the event.
 
     * 5b1. CCACommander shows an error message saying member is already in event.
@@ -479,12 +476,13 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User <ins>lists all members</ins> (UC03)
-2. CCACommander shows a list of all members
-3. User <ins>lists all events</ins> (UC04)
-4. CCACommander shows a list of all events
-5. User requests to delete a specific member in the list of all members to a specific event in the list of all events
-6. CCACommander deletes the specified member to the specified event
+1. User <ins>lists all members</ins> (UC03).
+2. CCACommander shows a list of all members.
+3. User <ins>lists all events</ins> (UC04).
+4. CCACommander shows a list of all events.
+5. User requests to delete a specific member in the list of all members to a specific event in the list of all events.
+6. CCACommander deletes the specified member to the specified event.
+
     Use case ends.
 
 **Extensions**
