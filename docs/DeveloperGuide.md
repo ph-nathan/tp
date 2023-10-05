@@ -451,9 +451,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User <ins>lists all members</ins> (UC02)
+1. User <ins>lists all members</ins> (UC03)
 2. CCACommander shows a list of all members
-3. User <ins>lists all events</ins> (UC03) 
+3. User <ins>lists all events</ins> (UC04) 
 4. CCACommander shows a list of all events
 5. User requests to add a specific member in the list of all members to a specific event in the list of all events
 6. CCACommander adds the specified member from the specified event
@@ -476,11 +476,12 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 <ins>**Use case: UC10 - Delete member from an event**</ins>
 
 **Guarantees: MSS -> Specified member will be deleted from the event.**
+
 **MSS**
 
-1. User <ins>lists all members</ins> (UC02)
+1. User <ins>lists all members</ins> (UC03)
 2. CCACommander shows a list of all members
-3. User <ins>lists all events</ins> (UC03)
+3. User <ins>lists all events</ins> (UC04)
 4. CCACommander shows a list of all events
 5. User requests to delete a specific member in the list of all members to a specific event in the list of all events
 6. CCACommander deletes the specified member to the specified event
@@ -525,7 +526,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * **Member**: An individual entity of the application
 * **MSS**: Main Success Scenario
 * **Non-Functional Requirements**: Constraints under which system is developed and operated
-* **PlantUML**: The tool or language used for creating diagrams in your documentation
+* **PlantUML**: The tool or language used for creating diagrams in the documentation
 * **Sequence Diagram**: A type of diagram used to visualize the sequence of interactions between components or objects
 
 
