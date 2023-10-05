@@ -257,13 +257,13 @@ _{Explain here how the data archiving feature will be implemented}_
 
 **Target user profile**:
 
-* has a need to manage a significant number of contacts
+* has a need to manage a significant number of CCA members and events
 * prefer desktop apps over other types
 * can type fast
 * prefers typing to mouse interactions
 * is reasonably comfortable using CLI apps
 
-**Value proposition**: manage contacts faster than a typical mouse/GUI driven app
+**Value proposition**: one stop app to manage CCA members and events faster than a typical mouse/GUI driven app
 
 
 ### User stories
@@ -289,16 +289,34 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `CCACommander` and the **Actor** is the `user`, unless specified otherwise)
 
-<ins>**Use case: UC01 - Delete a member**</ins>
+<ins>**Use case: UC01 - Create a member**</ins>
+
+**Guarantees: MSS -> Entered member will be added.**
+
+**MSS**
+
+1.  User enters command to create a member.
+2.  CCACommander adds that member to the member list and displays the member added.
+
+    Use case ends.
+
+**Extensions**
+* 1a. User uses the command incorrectly.
+
+    * 1a1. CCACommander shows an error message.
+
+      Use case ends.
+
+<ins>**Use case: UC02 - Delete a member**</ins>
 
 **Guarantees: MSS -> Specified member will be deleted.**
 
 **MSS**
 
-1. User requests to <ins>list all members</ins> (UC02)
-2. CCACommander shows a list of all members
-3. User requests to delete a specific member in the list of all members
-4. CCACommander deletes the specific member
+1. User requests to <ins>list all members</ins> (UC03).
+2. CCACommander shows a list of all members.
+3. User requests to delete a specific member in the list of all members.
+4. CCACommander deletes the specific member.
 
     Use case ends.
 
@@ -312,38 +330,54 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 4.
 
-<ins>**Use case : UC02 - List all members**</ins>
+<ins>**Use case : UC03 - List all members**</ins>
 
 **Guarantees: MSS -> All members will be listed.**
 
 **MSS**
 
-1. User requests to list all members
-2. CCACommander lists all members in the CCA
+1. User requests to list all members.
+2. CCACommander lists all members in the CCA.
 
    Use case ends.
 
-<ins>**Use case : UC03 - List all events**</ins>
+**Extensions**
+
+* 1a. The list of all members is empty.
+
+    * 1a1. CCACommander shows an empty member list.
+
+      Use case ends.
+
+<ins>**Use case : UC04 - List all events**</ins>
 
 **Guarantees: MSS -> All events will be listed.**
 
 **MSS**
 
-1. User requests to list all events
-2. CCACommander lists all events in the CCA
+1. User requests to list all events.
+2. CCACommander lists all events in the CCA.
 
    Use case ends.
 
-<ins>**Use case: UC04 - View members of event**</ins>
+**Extensions**
+
+* 1a. The list of all events is empty.
+
+    * 1a1. CCACommander shows an empty event list.
+
+      Use case ends.
+
+<ins>**Use case: UC05 - View members of event**</ins>
 
 **Guarantees: MSS -> All members of the specified event will be listed.**
 
 **MSS**
 
-1. User requests to <ins>list all events</ins> (UC03)
-2. CCACommander shows a list of all events
-3. User requests to view a specific event in the list of all events
-4. CCACommander displays all members of the specified event
+1. User requests to <ins>list all events</ins> (UC04).
+2. CCACommander shows a list of all events.
+3. User requests to view a specific event in the list of all events.
+4. CCACommander displays all members of the specified event.
 
    Use case ends.
 
@@ -354,16 +388,16 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-<ins>**Use case: UC05 - View events of member**</ins>
+<ins>**Use case: UC06 - View events of member**</ins>
 
 **Guarantees: MSS -> All events of the specified member will be listed.**
 
 **MSS**
 
-1. User requests to <ins>list all members</ins> (UC02)
-2. CCACommander shows a list of all members
-3. User requests to view a specific member in the list of all members
-4. CCACommander displays all events of the specified member
+1. User requests to <ins>list all members</ins> (UC03).
+2. CCACommander shows a list of all members.
+3. User requests to view a specific member in the list of all members.
+4. CCACommander displays all events of the specified member.
 
    Use case ends.
 
@@ -374,42 +408,44 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
-<ins>**Use case: UC06 - Create an event**</ins>
+<ins>**Use case: UC07 - Create an event**</ins>
 
 **Guarantees: MSS -> Entered event will be added.**
 
 **MSS**
 
-1.  User requests to add an event to the list
-2.  CCACommander adds that event to the event list and displays the event added
+1.  User requests to add an event to the list.
+2.  CCACommander adds that event to the event list and displays the event added.
+
+    Use case ends.
 
 **Extensions**
-* 1a. User uses the command incorrectly
+* 1a. User uses the command incorrectly.
 
-    * 1a1. CCACommander shows an error message
+    * 1a1. CCACommander shows an error message.
 
       Use case ends.
   
-* 1b. The entered event already exists
+* 1b. The entered event already exists.
 
-    * 1b1. CCACommander shows an error message
+    * 1b1. CCACommander shows an error message.
 
       Use case ends.
 
-<ins>**Use case: UC07 - Delete an event**</ins>
+<ins>**Use case: UC08 - Delete an event**</ins>
 
 **Guarantees: MSS -> Specified event will be deleted.**
 
 **MSS**
 
-1.  User <ins>lists all events</ins> (UC02)
-2.  CCACommander shows a list of all events
-3.  User requests to delete a specific event in the list of all events
-4.  CCACommander deletes the specific event
+1.  User <ins>lists all events</ins> (UC04).
+2.  CCACommander shows a list of all events.
+3.  User requests to delete a specific event in the list of all events.
+4.  CCACommander deletes the specific event.
 
     Use case ends.
 
-<ins>**Use case: UC08 - Add member to an event**</ins>
+<ins>**Use case: UC09 - Add member to an event**</ins>
 
 **Guarantees: MSS -> Specified member will be added to the event.**
 
@@ -437,7 +473,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
-<ins>**Use case: UC09 - Delete member from an event**</ins>
+<ins>**Use case: UC10 - Delete member from an event**</ins>
 
 **Guarantees: MSS -> Specified member will be deleted from the event.**
 **MSS**
