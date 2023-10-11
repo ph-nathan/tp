@@ -17,16 +17,16 @@ public class Event {
 
     // Data fields
     private final Location location;
-    private final Date date;
+    private final EventDate eventDate;
 
     /**
      * Every field must be present and not null.
      */
-    public Event(EventName eventName, Location location, Date date) {
-        requireAllNonNull(eventName, location, date);
+    public Event(EventName eventName, Location location, EventDate eventDate) {
+        requireAllNonNull(eventName, location, eventDate);
         this.eventName = eventName;
         this.location = location;
-        this.date = date;
+        this.eventDate = eventDate;
     }
 
     public EventName getName() {
@@ -36,8 +36,8 @@ public class Event {
     public Location getLocation() {
         return location;
     }
-    public Date getDate() {
-        return date;
+    public EventDate getDate() {
+        return eventDate;
     }
 }
 
@@ -72,13 +72,13 @@ public class Event {
         Event otherEvent = (Event) other;
         return eventName.equals(otherEvent.eventName)
                 && location.equals(otherEvent.location)
-                && date.equals(otherEvent.date);
+                && eventDate.equals(otherEvent.eventDate);
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(eventName, location, date);
+        return Objects.hash(eventName, location, eventDate);
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Event {
         return new ToStringBuilder(this)
                 .add("name", eventName)
                 .add("location", location)
-                .add("date", date)
+                .add("eventDate", eventDate)
                 .toString();
     }
 
