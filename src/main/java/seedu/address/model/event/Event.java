@@ -22,11 +22,11 @@ public class Event {
     /**
      * Every field must be present and not null.
      */
-    public Event(EventName eventName, Location location, EventDate eventDate) {
-        requireAllNonNull(eventName, location, eventDate);
+    public Event(EventName eventName, EventDate eventDate, Location location){
+        requireAllNonNull(eventName, eventDate, location);
         this.eventName = eventName;
-        this.location = location;
         this.eventDate = eventDate;
+        this.location = location;
     }
 
     public EventName getName() {
@@ -84,8 +84,8 @@ public class Event {
     public String toString() {
         return new ToStringBuilder(this)
                 .add("name", eventName)
+                .add("date", eventDate)
                 .add("location", location)
-                .add("eventDate", eventDate)
                 .toString();
     }
 

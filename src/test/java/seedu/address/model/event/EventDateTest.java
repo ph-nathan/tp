@@ -31,7 +31,7 @@ public class EventDateTest {
         assertFalse(EventDate.isValidDate(" ")); // spaces only
         assertFalse(EventDate.isValidDate("2005 12 12")); // wrong format
         assertFalse(EventDate.isValidDate("12th December 2005")); // wrong format
-        assertTrue(EventDate.isValidDate("2005-1-1")); // wrong format
+        assertFalse(EventDate.isValidDate("2005-1-1")); // wrong format
 
         // valid eventDates
         assertTrue(EventDate.isValidDate("2005-12-12"));

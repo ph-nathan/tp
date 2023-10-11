@@ -35,7 +35,7 @@ public class EventDate {
      */
     public static boolean isValidDate(String test) {
         try {
-            LocalDate.parse(test, LOCAL_DATE_FORMATTER);
+            LocalDate.parse(test);
             return true;
         } catch (DateTimeParseException e) {
             return false;
