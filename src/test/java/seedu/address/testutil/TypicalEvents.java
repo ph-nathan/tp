@@ -18,10 +18,10 @@ public class TypicalEvents {
     public static final Event BOXING_DAY = new EventBuilder().withName("Boxing Day")
             .withDate("2023-12-26").withLocation("Ridge View Residential College").build();
     public static final Event CHINESE_NEW_YEAR = new EventBuilder().withName("Chinese New Year")
-            .withDate("2024-01-30").withLocation("Communal Hall").build();
+            .withDate("2024-02-10").withLocation("Communal Hall").build();
 
     public static final Event DOG_DAY = new EventBuilder().withName("Dog Celebration Day")
-            .withDate("2024-02-17").withLocation("UTown Pitstop").build();
+            .withDate("2024-08-26").withLocation("UTown Pitstop").build();
 
     public static final Event ECHO_DAY = new EventBuilder().withName("Echo Day")
             .withDate("2023-05-05").withLocation("Batu Cave").build();
@@ -29,7 +29,7 @@ public class TypicalEvents {
             .withDate("2023-10-05").withLocation("Clementi 321").build();
 
     public static final Event GRAVITY_DISCOVERY_DAY = new EventBuilder().withName("Gravity Discovery Day")
-            .withDate("1940-06-18").withLocation("Cambridge University").build();
+            .withDate("1666-06-18").withLocation("Cambridge University").build();
 
     public static final String KEYWORD_MATCHING_FESTIVAL = "Festival"; // A keyword that matches Festival
 
