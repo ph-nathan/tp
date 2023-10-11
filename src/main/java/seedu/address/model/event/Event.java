@@ -39,7 +39,6 @@ public class Event {
     public EventDate getDate() {
         return eventDate;
     }
-}
 
     /**
      * Returns true if both persons have the same name.
