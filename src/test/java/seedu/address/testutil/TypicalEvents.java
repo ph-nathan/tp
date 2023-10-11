@@ -47,7 +47,7 @@ public class TypicalEvents {
     }
 
     public static List<Event> getTypicalEvents() {
-        return new ArrayList<>(Arrays.asList(AURORA_BOREALIS, BOXING_DAY, CHINESE_NEW_YEAR, DOG_DAY, ECHO_DAY
-                , FESTIVAL, GRAVITY_DISCOVERY_DAY));
+        return new ArrayList<>(Arrays.asList(AURORA_BOREALIS, BOXING_DAY, CHINESE_NEW_YEAR, DOG_DAY, ECHO_DAY,
+                FESTIVAL, GRAVITY_DISCOVERY_DAY));
     }
 }

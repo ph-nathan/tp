@@ -1,19 +1,9 @@
 package seedu.address.testutil;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventDate;
 import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
-import seedu.address.model.tag.Tag;
-import seedu.address.model.util.SampleDataUtil;
 
 /**
  * A utility class to help with building Person objects.
@@ -21,7 +11,7 @@ import seedu.address.model.util.SampleDataUtil;
 public class EventBuilder {
 
     public static final String DEFAULT_EVENT_NAME = "NUS Party";
-    public static final String DEFAULT_EVENT_DATE= "2023-12-08";
+    public static final String DEFAULT_EVENT_DATE = "2023-12-08";
     public static final String DEFAULT_LOCATION = "NUS COM3";
 
     private EventName name;
@@ -33,8 +23,8 @@ public class EventBuilder {
      */
     public EventBuilder() {
         name = new EventName(DEFAULT_EVENT_NAME);
-        date= new EventDate(DEFAULT_EVENT_DATE);
-        location= new Location(DEFAULT_LOCATION);
+        date = new EventDate(DEFAULT_EVENT_DATE);
+        location = new Location(DEFAULT_LOCATION);
     }
 
     /**

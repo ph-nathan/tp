@@ -6,13 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_DATE_BOXING;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_LOCATION_BOXING;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_BOXING;
-import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalEvents.AURORA_BOREALIS;
 import static seedu.address.testutil.TypicalEvents.BOXING_DAY;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.model.event.Event;
 import seedu.address.testutil.EventBuilder;
 
 public class EventTest {

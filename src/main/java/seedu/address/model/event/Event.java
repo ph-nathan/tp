@@ -22,7 +22,7 @@ public class Event {
     /**
      * Every field must be present and not null.
      */
-    public Event(EventName eventName, EventDate eventDate, Location location){
+    public Event(EventName eventName, EventDate eventDate, Location location) {
         requireAllNonNull(eventName, eventDate, location);
         this.eventName = eventName;
         this.eventDate = eventDate;
