@@ -17,6 +17,7 @@ public class TypicalEvents {
 
     public static final Event BOXING_DAY = new EventBuilder().withName("Boxing Day")
             .withDate("2023-12-26").withLocation("Ridge View Residential College").build();
+
     public static final Event CHINESE_NEW_YEAR = new EventBuilder().withName("Chinese New Year")
             .withDate("2024-02-10").withLocation("Communal Hall").build();
 
@@ -25,6 +26,7 @@ public class TypicalEvents {
 
     public static final Event ECHO_DAY = new EventBuilder().withName("Echo Day")
             .withDate("2023-05-05").withLocation("Batu Cave").build();
+
     public static final Event FESTIVAL = new EventBuilder().withName("Festival")
             .withDate("2023-10-05").withLocation("Clementi 321").build();
 
@@ -36,7 +38,7 @@ public class TypicalEvents {
     private TypicalEvents() {} // prevents instantiation
 
     /**
-     * Returns an {@code AddressBook} with all the typical persons.
+     * Returns an {@code AddressBook} with all the typical events.
      */
     public static AddressBook getTypicalAddressBook() {
         AddressBook ab = new AddressBook();
