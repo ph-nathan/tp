@@ -17,7 +17,7 @@ public class Gender {
     /**
      * Constructs an {@code Gender}.
      *
-     * @param gender A valid email address.
+     * @param gender A valid gender.
      */
     public Gender(String gender) {
         requireNonNull(gender);
@@ -26,12 +26,12 @@ public class Gender {
     }
 
     /**
-     * Returns if a given string is a valid email.
+     * Returns if a given string is a valid gender.
      */
     public static boolean isValidGender(String test) {
-        return test.equals("Male")
-                || test.equals("Female")
-                || test.equals("Others");
+        return test.trim().equals("Male")
+                || test.trim().equals("Female")
+                || test.trim().equals("Others");
     }
 
     @Override
