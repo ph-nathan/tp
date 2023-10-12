@@ -23,10 +23,10 @@ public class EventTest {
         // null -> returns false
         assertFalse(AURORA_BOREALIS.isSameEvent(null));
 
-        // same name, all other attributes different -> returns true
+        // same name, all other attributes different -> returns false
         Event editedAurora = new EventBuilder(AURORA_BOREALIS).withDate(VALID_DATE_BOXING)
                 .withLocation(VALID_LOCATION_BOXING).build();
-        assertTrue(AURORA_BOREALIS.isSameEvent(editedAurora));
+        assertFalse(AURORA_BOREALIS.isSameEvent(editedAurora));
 
         // different name, all other attributes same -> returns false
         editedAurora = new EventBuilder(AURORA_BOREALIS).withName(VALID_NAME_BOXING).build();

@@ -41,9 +41,9 @@ public class UniqueEventListTest {
     @Test
     public void contains_eventWithSameIdentityFieldsInList_returnsTrue() {
         uniqueEventList.addEvent(AURORA_BOREALIS);
-        Event editedAlice = new EventBuilder(AURORA_BOREALIS).withLocation(VALID_LOCATION_BOXING)
+        Event editedAurora = new EventBuilder(AURORA_BOREALIS).withLocation(VALID_LOCATION_BOXING)
                 .build();
-        assertTrue(uniqueEventList.contains(editedAlice));
+        assertFalse(uniqueEventList.contains(editedAurora));
     }
 
     @Test

@@ -4,7 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_ADDRESS_BOB;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_DATE_AURORA;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_DATE_BOXING;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_LOCATION_AURORA;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_LOCATION_BOXING;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
 import static seedu.address.testutil.Assert.assertThrows;
@@ -91,9 +93,9 @@ public class AddressBookTest {
 
     @Test
     public void resetData_withDuplicateEvents_throwsDuplicateEventException() {
-        // Two persons with the same identity fields
-        Event editedAurora = new EventBuilder(AURORA_BOREALIS).withDate(VALID_DATE_BOXING)
-                .withLocation(VALID_LOCATION_BOXING).build();
+        // Two events with the same identity fields
+        Event editedAurora = new EventBuilder(AURORA_BOREALIS).withDate(VALID_DATE_AURORA)
+                .withLocation(VALID_LOCATION_AURORA).build();
         List<Event> newEvents = Arrays.asList(AURORA_BOREALIS, editedAurora);
         AddressBookStub newData = new AddressBookStub(Arrays.asList(), newEvents);
 
@@ -117,12 +119,12 @@ public class AddressBookTest {
     }
 
     @Test
-    public void hasEvent_eventWithSameIdentityFieldsInAddressBook_returnsTrue() {
+    public void hasEvent_eventWithSameNameInAddressBook_returnsFalse() {
         addressBook.addEvent(AURORA_BOREALIS);
         Event editedAurora = new EventBuilder(AURORA_BOREALIS).withDate(VALID_DATE_BOXING)
                 .withLocation(VALID_LOCATION_BOXING)
                 .build();
-        assertTrue(addressBook.hasEvent(editedAurora));
+        assertFalse(addressBook.hasEvent(editedAurora));
     }
     @Test
     public void toStringMethod() {
