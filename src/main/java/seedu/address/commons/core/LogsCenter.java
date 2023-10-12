@@ -86,12 +86,12 @@ public class LogsCenter {
         // Level.ALL is used as the level for the handlers because the baseLogger filters the log messages by level
         // already; there is no need to control log message level of the handlers.
 
-        // adds a ConsoleHandler to log to the console
+        // add a ConsoleHandler to log to the console
         ConsoleHandler consoleHandler = new ConsoleHandler();
         consoleHandler.setLevel(Level.ALL);
         baseLogger.addHandler(consoleHandler);
 
-        // adds a FileHandler to log to a file
+        // add a FileHandler to log to a file
         try {
             FileHandler fileHandler = new FileHandler(LOG_FILE, MAX_FILE_SIZE_IN_BYTES, MAX_FILE_COUNT, true);
             fileHandler.setFormatter(new SimpleFormatter());
