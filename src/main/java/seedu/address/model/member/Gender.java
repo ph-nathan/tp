@@ -29,10 +29,10 @@ public class Gender {
     /**
      * Returns True if a given string is a valid gender.
      */
-    public static boolean isValidGender(String test) {
-        return test.trim().equals("Male")
-                || test.trim().equals("Female")
-                || test.trim().equals("Others");
+    public static boolean isValidGender(String userInputGender) {
+        return userInputGender.trim().equals("Male")
+                || userInputGender.trim().equals("Female")
+                || userInputGender.trim().equals("Others");
     }
 
     @Override
