@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Selwyn's Project Portfolio Page
+title: Nathan's Project Portfolio Page
 ---
 
 ### Project: CCACommander Ultra Promax Xtra 9000PLUS
@@ -11,7 +11,7 @@ Given below are my contributions to the project.
 
 * **New Feature**:
 
-* **Code contributed**: [RepoSense link](https://nus-cs2103-ay2324s1.github.io/tp-dashboard/?search=selwynang&breakdown=true#/)
+* **Code contributed**: [RepoSense link](https://nus-cs2103-ay2324s1.github.io/tp-dashboard/?search=ph-nathan&breakdown=true#/)
 
 * **Project management**:
 

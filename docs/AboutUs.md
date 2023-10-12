@@ -5,8 +5,6 @@ title: About Us
 
 We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg).
 
-You can reach us at the email `seer[at]comp.nus.edu.sg`
-
 ## Project team
 
 ### Ang Jing Xuan Selwyn
@@ -18,15 +16,14 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 * Role: Team Lead
 * Responsibilities: Overall team coordination, Code Quality
 
-### Jane Doe
+### Andre Chua Kai Jun
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/andrechuakj.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/andrechuakj)] [[portfolio](team/andrechuakj.md)] [[email](mailto:andre.chua@u.nus.edu)]
 
-* Role: Team Lead
-* Responsibilities: UI
+* Role: Developer
+* Responsibilities: Documentation
 
 ### Chu Wei Rong
 
@@ -46,12 +43,11 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 * Role: Developer
 * Responsibilities: Deliverables and deadlines
 
-### James Doe
+### Pham Quang Nhat
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/ph-nathan.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/ph-nathan)] [[portfolio](team/ph-nathan.md)] [[email](mailto:e0960490@nus.edu.sg)]
 
 * Role: Developer
 * Responsibilities: UI
