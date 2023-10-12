@@ -12,9 +12,9 @@ import seedu.address.model.member.Member;
 /**
  * An UI component that displays information of a {@code Member}.
  */
-public class PersonCard extends UiPart<Region> {
+public class MemberCard extends UiPart<Region> {
 
-    private static final String FXML = "PersonListCard.fxml";
+    private static final String FXML = "MemberListCard.fxml";
 
     /**
      * Note: Certain keywords such as "location" and "resources" are reserved keywords in JavaFX.
@@ -42,9 +42,9 @@ public class PersonCard extends UiPart<Region> {
     private FlowPane tags;
 
     /**
-     * Creates a {@code PersonCode} with the given {@code Member} and index to display.
+     * Creates a {@code MemberCode} with the given {@code Member} and index to display.
      */
-    public PersonCard(Member member, int displayedIndex) {
+    public MemberCard(Member member, int displayedIndex) {
         super(FXML);
         this.member = member;
         id.setText(displayedIndex + ". ");
