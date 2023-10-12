@@ -7,7 +7,7 @@ import java.util.Objects;
 import seedu.address.commons.util.ToStringBuilder;
 
 /**
- * Represents a Person in the address book.
+ * Represents an Event in the address book.
  * Guarantees: details are present and not null, field values are validated, immutable.
  */
 public class Event {
