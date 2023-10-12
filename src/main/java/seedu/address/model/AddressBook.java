@@ -122,7 +122,7 @@ public class AddressBook implements ReadOnlyAddressBook {
      * The event must not already exist in the address book.
      */
     public void addEvent(Event e) {
-        events.add(e);
+        events.addEvent(e);
     }
 
     /**

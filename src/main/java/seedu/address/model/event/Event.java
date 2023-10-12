@@ -30,14 +30,14 @@ public class Event {
     }
 
     public EventName getName() {
-        return eventName;
+        return this.eventName;
     }
 
     public Location getLocation() {
-        return location;
+        return this.location;
     }
     public EventDate getDate() {
-        return eventDate;
+        return this.eventDate;
     }
 
     /**
@@ -50,7 +50,9 @@ public class Event {
         }
 
         return otherEvent != null
-                && otherEvent.getName().equals(getName());
+                && otherEvent.getName().equals(getName())
+                && otherEvent.getDate().equals(getDate())
+                && otherEvent.getLocation().equals(getLocation());
     }
 
     /**
@@ -69,15 +71,15 @@ public class Event {
         }
 
         Event otherEvent = (Event) other;
-        return eventName.equals(otherEvent.eventName)
-                && location.equals(otherEvent.location)
-                && eventDate.equals(otherEvent.eventDate);
+        return this.eventName.equals(otherEvent.eventName)
+                && this.location.equals(otherEvent.location)
+                && this.eventDate.equals(otherEvent.eventDate);
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(eventName, location, eventDate);
+        return Objects.hash(this.eventName, this.location, this.eventDate);
     }
 
     @Override

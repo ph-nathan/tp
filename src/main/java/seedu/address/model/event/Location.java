@@ -27,11 +27,11 @@ public class Location {
     public Location(String location) {
         requireNonNull(location);
         checkArgument(isValidLocation(location), MESSAGE_CONSTRAINTS);
-        value = location;
+        this.value = location;
     }
 
     /**
-     * Returns true if a given string is a valid email.
+     * Returns true if a given string is a valid location.
      */
     public static boolean isValidLocation(String test) {
         return test.matches(VALIDATION_REGEX);

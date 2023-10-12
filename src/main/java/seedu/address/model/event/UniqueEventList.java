@@ -31,21 +31,21 @@ public class UniqueEventList implements Iterable<Event> {
     /**
      * Returns true if the list contains an equivalent event as the given argument.
      */
-    public boolean contains(Event toCheck) {
-        requireNonNull(toCheck);
-        return internalList.stream().anyMatch(toCheck::isSameEvent);
+    public boolean contains(Event eventToCheck) {
+        requireNonNull(eventToCheck);
+        return internalList.stream().anyMatch(eventToCheck::isSameEvent);
     }
 
     /**
      * Adds an event to the list.
      * The event must not already exist in the list.
      */
-    public void add(Event toAdd) {
-        requireNonNull(toAdd);
-        if (contains(toAdd)) {
+    public void addEvent(Event eventToAdd) {
+        requireNonNull(eventToAdd);
+        if (contains(eventToAdd)) {
             throw new DuplicateEventException();
         }
-        internalList.add(toAdd);
+        internalList.add(eventToAdd);
     }
 
     /**
@@ -53,15 +53,15 @@ public class UniqueEventList implements Iterable<Event> {
      * {@code target} must exist in the list.
      * The event identity of {@code editedEvent} must not be the same as another event existing  in the list.
      */
-    public void setEvent(Event target, Event editedEvent) {
-        requireAllNonNull(target, editedEvent);
+    public void setEvent(Event targetEvent, Event editedEvent) {
+        requireAllNonNull(targetEvent, editedEvent);
 
-        int index = internalList.indexOf(target);
+        int index = internalList.indexOf(targetEvent);
         if (index == -1) {
             throw new EventNotFoundException();
         }
 
-        if (!target.isSameEvent(editedEvent) && contains(editedEvent)) {
+        if (!targetEvent.isSameEvent(editedEvent) && contains(editedEvent)) {
             throw new DuplicateEventException();
         }
 
