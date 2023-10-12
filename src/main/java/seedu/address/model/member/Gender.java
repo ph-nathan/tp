@@ -16,13 +16,14 @@ public class Gender {
 
     /**
      * Constructs an {@code Gender}.
+     * Trims any leading and trailing whitespaces of the gender param.
      *
      * @param gender A valid gender.
      */
     public Gender(String gender) {
         requireNonNull(gender);
         checkArgument(isValidGender(gender), MESSAGE_CONSTRAINTS);
-        value = gender;
+        value = gender.trim();
     }
 
     /**
