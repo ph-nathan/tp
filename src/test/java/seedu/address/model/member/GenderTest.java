@@ -36,6 +36,26 @@ public class GenderTest {
     }
 
     @Test
+    public void toStringFunction() {
+        Gender gender = new Gender("Others");
+        assertTrue(gender.toString().equals("Others"));
+        assertFalse(gender.toString().equals("others"));
+        assertFalse(gender.toString().equals("oThERs"));
+        assertFalse(gender.toString().equals(" Others "));
+
+        gender = new Gender("Male");
+        assertTrue(gender.toString().equals("Male"));
+        assertFalse(gender.toString().equals("male"));
+        assertFalse(gender.toString().equals("mAlE"));
+        assertFalse(gender.toString().equals(" Male "));
+
+        gender = new Gender("Female");
+        assertTrue(gender.toString().equals("Female"));
+        assertFalse(gender.toString().equals("female"));
+        assertFalse(gender.toString().equals("FEmAlE"));
+        assertFalse(gender.toString().equals(" Female "));
+    }
+    @Test
     public void equals() {
         Gender gender = new Gender("Male");
 
