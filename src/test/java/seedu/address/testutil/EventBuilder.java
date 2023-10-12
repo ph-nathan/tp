@@ -6,7 +6,7 @@ import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;
 
 /**
- * A utility class to help with building Person objects.
+ * A utility class to help with building Events objects.
  */
 public class EventBuilder {
 
