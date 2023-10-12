@@ -38,7 +38,7 @@ public class AddressBook implements ReadOnlyAddressBook {
         resetData(toBeCopied);
     }
 
-    //// list overwrite operations
+    // list overwrite operations
 
     /**
      * Replaces the contents of the member list with {@code members}.
@@ -57,7 +57,7 @@ public class AddressBook implements ReadOnlyAddressBook {
         setMembers(newData.getMemberList());
     }
 
-    //// member-level operations
+    // member-level operations
 
     /**
      * Returns true if a member with the same identity as {@code member} exists in the address book.
@@ -94,7 +94,7 @@ public class AddressBook implements ReadOnlyAddressBook {
         members.remove(key);
     }
 
-    //// util methods
+    // util methods
 
     @Override
     public String toString() {
