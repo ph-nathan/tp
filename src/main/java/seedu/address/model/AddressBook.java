@@ -44,7 +44,7 @@ public class AddressBook implements ReadOnlyAddressBook {
      * Replaces the contents of the member list with {@code members}.
      * {@code members} must not contain duplicate members.
      */
-    public void setPersons(List<Member> members) {
+    public void setMembers(List<Member> members) {
         this.members.setMembers(members);
     }
 
@@ -54,7 +54,7 @@ public class AddressBook implements ReadOnlyAddressBook {
     public void resetData(ReadOnlyAddressBook newData) {
         requireNonNull(newData);
 
-        setPersons(newData.getMemberList());
+        setMembers(newData.getMemberList());
     }
 
     //// member-level operations

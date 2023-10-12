@@ -60,17 +60,17 @@ public class TypicalMembers {
     private TypicalMembers() {} // prevents instantiation
 
     /**
-     * Returns an {@code AddressBook} with all the typical persons.
+     * Returns an {@code AddressBook} with all the typical members.
      */
     public static AddressBook getTypicalAddressBook() {
         AddressBook ab = new AddressBook();
-        for (Member member : getTypicalPersons()) {
+        for (Member member : getTypicalMembers()) {
             ab.addMember(member);
         }
         return ab;
     }
 
-    public static List<Member> getTypicalPersons() {
+    public static List<Member> getTypicalMembers() {
         return new ArrayList<>(Arrays.asList(ALICE, BENSON, CARL, DANIEL, ELLE, FIONA, GEORGE));
     }
 }

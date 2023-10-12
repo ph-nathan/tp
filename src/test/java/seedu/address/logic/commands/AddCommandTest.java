@@ -28,24 +28,24 @@ import seedu.address.testutil.MemberBuilder;
 public class AddCommandTest {
 
     @Test
-    public void constructor_nullPerson_throwsNullPointerException() {
+    public void constructor_nullMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> new AddCommand(null));
     }
 
     @Test
-    public void execute_personAcceptedByModel_addSuccessful() throws Exception {
-        ModelStubAcceptingPersonAdded modelStub = new ModelStubAcceptingPersonAdded();
+    public void execute_memberAcceptedByModel_addSuccessful() throws Exception {
+        ModelStubAcceptingMemberAdded modelStub = new ModelStubAcceptingMemberAdded();
         Member validMember = new MemberBuilder().build();
 
         CommandResult commandResult = new AddCommand(validMember).execute(modelStub);
 
         assertEquals(String.format(AddCommand.MESSAGE_SUCCESS, Messages.format(validMember)),
                 commandResult.getFeedbackToUser());
-        assertEquals(Arrays.asList(validMember), modelStub.personsAdded);
+        assertEquals(Arrays.asList(validMember), modelStub.membersAdded);
     }
 
     @Test
-    public void execute_duplicatePerson_throwsCommandException() {
+    public void execute_duplicateMember_throwsCommandException() {
         Member validMember = new MemberBuilder().build();
         AddCommand addCommand = new AddCommand(validMember);
         ModelStub modelStub = new ModelStubWithMember(validMember);
@@ -180,19 +180,19 @@ public class AddCommandTest {
     /**
      * A Model stub that always accept the member being added.
      */
-    private class ModelStubAcceptingPersonAdded extends ModelStub {
-        final ArrayList<Member> personsAdded = new ArrayList<>();
+    private class ModelStubAcceptingMemberAdded extends ModelStub {
+        final ArrayList<Member> membersAdded = new ArrayList<>();
 
         @Override
         public boolean hasMember(Member member) {
             requireNonNull(member);
-            return personsAdded.stream().anyMatch(member::isSameMember);
+            return membersAdded.stream().anyMatch(member::isSameMember);
         }
 
         @Override
         public void addMember(Member member) {
             requireNonNull(member);
-            personsAdded.add(member);
+            membersAdded.add(member);
         }
 
         @Override

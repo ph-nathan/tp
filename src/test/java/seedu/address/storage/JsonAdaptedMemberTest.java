@@ -33,7 +33,7 @@ public class JsonAdaptedMemberTest {
             .collect(Collectors.toList());
 
     @Test
-    public void toModelType_validPersonDetails_returnsPerson() throws Exception {
+    public void toModelType_validMemberDetails_returnsMember() throws Exception {
         JsonAdaptedMember person = new JsonAdaptedMember(BENSON);
         assertEquals(BENSON, person.toModelType());
     }
