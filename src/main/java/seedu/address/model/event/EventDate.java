@@ -59,8 +59,8 @@ public class EventDate {
             return false;
         }
 
-        EventDate otherName = (EventDate) other;
-        return date.equals(otherName.date);
+        EventDate otherDate = (EventDate) other;
+        return date.equals(otherDate.date);
     }
 
     @Override
