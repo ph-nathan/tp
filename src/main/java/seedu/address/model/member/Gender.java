@@ -15,7 +15,7 @@ public class Gender {
     public final String value;
 
     /**
-     * Constructs an {@code Gender}.
+     * Constructs a {@code Gender}.
      * Trims any leading and trailing whitespaces of the gender param.
      *
      * @param gender A valid gender.
@@ -27,7 +27,7 @@ public class Gender {
     }
 
     /**
-     * Returns if a given string is a valid gender.
+     * Returns True if a given string is a valid gender.
      */
     public static boolean isValidGender(String test) {
         return test.trim().equals("Male")
