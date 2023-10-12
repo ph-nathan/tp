@@ -48,7 +48,7 @@ public class AddCommandTest {
     public void execute_duplicatePerson_throwsCommandException() {
         Member validMember = new MemberBuilder().build();
         AddCommand addCommand = new AddCommand(validMember);
-        ModelStub modelStub = new ModelStubWithPerson(validMember);
+        ModelStub modelStub = new ModelStubWithMember(validMember);
 
         assertThrows(CommandException.class, AddCommand.MESSAGE_DUPLICATE_MEMBER, () -> addCommand.execute(modelStub));
     }
@@ -162,10 +162,10 @@ public class AddCommandTest {
     /**
      * A Model stub that contains a single member.
      */
-    private class ModelStubWithPerson extends ModelStub {
+    private class ModelStubWithMember extends ModelStub {
         private final Member member;
 
-        ModelStubWithPerson(Member member) {
+        ModelStubWithMember(Member member) {
             requireNonNull(member);
             this.member = member;
         }

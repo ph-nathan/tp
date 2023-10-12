@@ -25,7 +25,7 @@ public class MemberTest {
     }
 
     @Test
-    public void isSamePerson() {
+    public void isSameMember() {
         // same object -> returns true
         assertTrue(ALICE.isSameMember(ALICE));
 

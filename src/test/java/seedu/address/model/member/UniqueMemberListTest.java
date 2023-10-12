@@ -53,23 +53,23 @@ public class UniqueMemberListTest {
     }
 
     @Test
-    public void add_duplicateMember_throwsDuplicatePersonException() {
+    public void add_duplicateMember_throwsDuplicateMemberException() {
         uniqueMemberList.add(ALICE);
         assertThrows(DuplicateMemberException.class, () -> uniqueMemberList.add(ALICE));
     }
 
     @Test
-    public void setPerson_nullTargetMember_throwsNullPointerException() {
+    public void setMember_nullTargetMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.setMember(null, ALICE));
     }
 
     @Test
-    public void setPerson_nullEditedMember_throwsNullPointerException() {
+    public void setMember_nullEditedMember_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> uniqueMemberList.setMember(ALICE, null));
     }
 
     @Test
-    public void setPerson_targetMemberNotInList_throwsMemberNotFoundException() {
+    public void setMember_targetMemberNotInList_throwsMemberNotFoundException() {
         assertThrows(MemberNotFoundException.class, () -> uniqueMemberList.setMember(ALICE, ALICE));
     }
 
