@@ -84,11 +84,11 @@ public class UniqueEventListTest {
     @Test
     public void setEvent_editedEventHasSameIdentity_success() {
         uniqueEventList.addEvent(AURORA_BOREALIS);
-        Event editedAlice = new EventBuilder(AURORA_BOREALIS).withLocation(VALID_LOCATION_BOXING)
+        Event editedAurora = new EventBuilder(AURORA_BOREALIS).withLocation(VALID_LOCATION_BOXING)
                 .build();
-        uniqueEventList.setEvent(AURORA_BOREALIS, editedAlice);
+        uniqueEventList.setEvent(AURORA_BOREALIS, editedAurora);
         UniqueEventList expectedUniqueEventList = new UniqueEventList();
-        expectedUniqueEventList.addEvent(editedAlice);
+        expectedUniqueEventList.addEvent(editedAurora);
         assertEquals(expectedUniqueEventList, uniqueEventList);
     }
 
