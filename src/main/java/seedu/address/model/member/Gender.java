@@ -2,6 +2,7 @@ package seedu.address.model.member;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
+import static seedu.address.commons.util.StringUtil.capitaliseString;
 
 /**
  * Represents a Member's gender in CCACommander.
@@ -23,21 +24,21 @@ public class Gender {
     public Gender(String gender) {
         requireNonNull(gender);
         checkArgument(isValidGender(gender), MESSAGE_CONSTRAINTS);
-        value = gender.trim();
+        value = gender.trim().toLowerCase();
     }
 
     /**
      * Returns True if a given string is a valid gender.
      */
     public static boolean isValidGender(String userInputGender) {
-        return userInputGender.trim().equals("Male")
-                || userInputGender.trim().equals("Female")
-                || userInputGender.trim().equals("Others");
+        return userInputGender.trim().toLowerCase().equals("male")
+                || userInputGender.trim().toLowerCase().equals("female")
+                || userInputGender.trim().toLowerCase().equals("others");
     }
 
     @Override
     public String toString() {
-        return value;
+        return capitaliseString(value);
     }
 
     @Override
