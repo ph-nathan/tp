@@ -1,5 +1,6 @@
 package seedu.address.commons.util;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.testutil.Assert.assertThrows;
@@ -140,4 +141,23 @@ public class StringUtilTest {
         assertThrows(NullPointerException.class, () -> StringUtil.getDetails(null));
     }
 
+    //---------------- Tests for capitaliseString --------------------------------------
+
+    @Test
+    public void capitaliseString_validInput_correctResult() {
+        assertEquals("Caps", StringUtil.capitaliseString("caps"));
+        assertEquals("Ca", StringUtil.capitaliseString("ca"));
+        assertEquals("C", StringUtil.capitaliseString("c"));
+
+        assertEquals("CAPS", StringUtil.capitaliseString("CAPS"));
+        assertEquals("CAPS", StringUtil.capitaliseString("cAPS"));
+        assertEquals("CapS", StringUtil.capitaliseString("capS"));
+    }
+
+    @Test
+    public void capitaliseString_blankInput_correctResult() {
+        assertEquals("", StringUtil.capitaliseString(""));
+        assertEquals(" ", StringUtil.capitaliseString(" "));
+        assertEquals("     ", StringUtil.capitaliseString("     "));
+    }
 }
