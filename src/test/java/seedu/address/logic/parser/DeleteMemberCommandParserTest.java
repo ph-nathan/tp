@@ -14,7 +14,7 @@ public class DeleteMemberCommandParserTest {
 
     @Test
     public void parse_validArgs_returnsDeleteMemberCommand() {
-        assertParseSuccess(parser, "deleteMember 1", new DeleteMemberCommand(INDEX_FIRST_MEMBER));
+        assertParseSuccess(parser, "1", new DeleteMemberCommand(INDEX_FIRST_MEMBER));
     }
 
     @Test
