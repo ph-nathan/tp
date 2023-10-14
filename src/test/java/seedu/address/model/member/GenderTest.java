@@ -33,6 +33,8 @@ public class GenderTest {
         assertTrue(Gender.isValidGender("Male"));
         assertTrue(Gender.isValidGender("Female"));
         assertTrue(Gender.isValidGender("Others"));
+        assertTrue(Gender.isValidGender("others")); // lower case
+        assertTrue(Gender.isValidGender("otHeRS")); // mixed case
     }
 
     @Test

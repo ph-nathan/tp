@@ -65,4 +65,16 @@ public class StringUtil {
             return false;
         }
     }
+
+    /**
+     * Returns the string {@code s} with the first character capitalised.
+     */
+    public static String capitaliseString(String s) {
+        requireNonNull(s);
+        if (s.length() == 0) {
+            return s;
+        }
+
+        return s.substring(0, 1).toUpperCase() + s.substring(1);
+    }
 }
