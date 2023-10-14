@@ -17,6 +17,9 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.AddressBook;
 import seedu.address.model.Model;
+import seedu.address.model.event.Event;
+import seedu.address.model.event.EventName;
+import seedu.address.model.event.EventNameContainsKeywordsPredicate;
 import seedu.address.model.member.Member;
 import seedu.address.model.member.NameContainsKeywordsPredicate;
 import seedu.address.testutil.EditMemberDescriptorBuilder;
@@ -132,4 +135,16 @@ public class CommandTestUtil {
         assertEquals(1, model.getFilteredMemberList().size());
     }
 
+    /**
+     * Updates {@code model}'s filtered list to show only the event at the given {@code targetIndex} in the
+     * {@code model}'s address book.
+     */
+    public static void showEventAtIndex(Model model, Index targetIndex) {
+        assertTrue(targetIndex.getZeroBased() < model.getFilteredEventList().size());
+
+        Event event = model.getFilteredEventList().get(targetIndex.getZeroBased());
+        model.updateFilteredEventList(new EventNameContainsKeywordsPredicate(Arrays.asList(event.getName().toString())));
+
+        assertEquals(1, model.getFilteredMemberList().size());
+    }
 }

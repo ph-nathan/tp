@@ -21,32 +21,32 @@ import seedu.address.model.member.Member;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for
- * {@code DeleteCommand}.
+ * {@code DeleteMemberCommand}.
  */
-public class DeleteCommandTest {
+public class DeleteMemberCommandTest {
 
     private Model model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
 
     @Test
     public void execute_validIndexUnfilteredList_success() {
         Member memberToDelete = model.getFilteredMemberList().get(INDEX_FIRST_MEMBER.getZeroBased());
-        DeleteCommand deleteCommand = new DeleteCommand(INDEX_FIRST_MEMBER);
+        DeleteMemberCommand deleteMemberCommand = new DeleteMemberCommand(INDEX_FIRST_MEMBER);
 
-        String expectedMessage = String.format(DeleteCommand.MESSAGE_DELETE_MEMBER_SUCCESS,
+        String expectedMessage = String.format(DeleteMemberCommand.MESSAGE_DELETE_MEMBER_SUCCESS,
                 Messages.format(memberToDelete));
 
         ModelManager expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
         expectedModel.deleteMember(memberToDelete);
 
-        assertCommandSuccess(deleteCommand, model, expectedMessage, expectedModel);
+        assertCommandSuccess(deleteMemberCommand, model, expectedMessage, expectedModel);
     }
 
     @Test
     public void execute_invalidIndexUnfilteredList_throwsCommandException() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredMemberList().size() + 1);
-        DeleteCommand deleteCommand = new DeleteCommand(outOfBoundIndex);
+        DeleteMemberCommand deleteMemberCommand = new DeleteMemberCommand(outOfBoundIndex);
 
-        assertCommandFailure(deleteCommand, model, Messages.MESSAGE_INVALID_MEMBER_DISPLAYED_INDEX);
+        assertCommandFailure(deleteMemberCommand, model, Messages.MESSAGE_INVALID_MEMBER_DISPLAYED_INDEX);
     }
 
     @Test
@@ -54,16 +54,16 @@ public class DeleteCommandTest {
         showMemberAtIndex(model, INDEX_FIRST_MEMBER);
 
         Member memberToDelete = model.getFilteredMemberList().get(INDEX_FIRST_MEMBER.getZeroBased());
-        DeleteCommand deleteCommand = new DeleteCommand(INDEX_FIRST_MEMBER);
+        DeleteMemberCommand deleteMemberCommand = new DeleteMemberCommand(INDEX_FIRST_MEMBER);
 
-        String expectedMessage = String.format(DeleteCommand.MESSAGE_DELETE_MEMBER_SUCCESS,
+        String expectedMessage = String.format(DeleteMemberCommand.MESSAGE_DELETE_MEMBER_SUCCESS,
                 Messages.format(memberToDelete));
 
         Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
         expectedModel.deleteMember(memberToDelete);
         showNoMember(expectedModel);
 
-        assertCommandSuccess(deleteCommand, model, expectedMessage, expectedModel);
+        assertCommandSuccess(deleteMemberCommand, model, expectedMessage, expectedModel);
     }
 
     @Test
@@ -74,43 +74,43 @@ public class DeleteCommandTest {
         // ensures that outOfBoundIndex is still in bounds of address book list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getAddressBook().getMemberList().size());
 
-        DeleteCommand deleteCommand = new DeleteCommand(outOfBoundIndex);
+        DeleteMemberCommand deleteMemberCommand = new DeleteMemberCommand(outOfBoundIndex);
 
-        assertCommandFailure(deleteCommand, model, Messages.MESSAGE_INVALID_MEMBER_DISPLAYED_INDEX);
+        assertCommandFailure(deleteMemberCommand, model, Messages.MESSAGE_INVALID_MEMBER_DISPLAYED_INDEX);
     }
 
     @Test
     public void equals() {
-        DeleteCommand deleteFirstCommand = new DeleteCommand(INDEX_FIRST_MEMBER);
-        DeleteCommand deleteSecondCommand = new DeleteCommand(INDEX_SECOND_MEMBER);
+        DeleteMemberCommand deleteMemberFirstCommand = new DeleteMemberCommand(INDEX_FIRST_MEMBER);
+        DeleteMemberCommand deleteMemberSecondCommand = new DeleteMemberCommand(INDEX_SECOND_MEMBER);
 
         // same object -> returns true
-        assertTrue(deleteFirstCommand.equals(deleteFirstCommand));
+        assertTrue(deleteMemberFirstCommand.equals(deleteMemberFirstCommand));
 
         // same values -> returns true
-        DeleteCommand deleteFirstCommandCopy = new DeleteCommand(INDEX_FIRST_MEMBER);
-        assertTrue(deleteFirstCommand.equals(deleteFirstCommandCopy));
+        DeleteMemberCommand deleteMemberFirstCommandCopy = new DeleteMemberCommand(INDEX_FIRST_MEMBER);
+        assertTrue(deleteMemberFirstCommand.equals(deleteMemberFirstCommandCopy));
 
         // different types -> returns false
-        assertFalse(deleteFirstCommand.equals(1));
+        assertFalse(deleteMemberFirstCommand.equals(1));
 
         // null -> returns false
-        assertFalse(deleteFirstCommand.equals(null));
+        assertFalse(deleteMemberFirstCommand.equals(null));
 
         // different member -> returns false
-        assertFalse(deleteFirstCommand.equals(deleteSecondCommand));
+        assertFalse(deleteMemberFirstCommand.equals(deleteMemberSecondCommand));
     }
 
     @Test
     public void toStringMethod() {
         Index targetIndex = Index.fromOneBased(1);
-        DeleteCommand deleteCommand = new DeleteCommand(targetIndex);
-        String expected = DeleteCommand.class.getCanonicalName() + "{targetIndex=" + targetIndex + "}";
-        assertEquals(expected, deleteCommand.toString());
+        DeleteMemberCommand deleteMemberCommand = new DeleteMemberCommand(targetIndex);
+        String expected = DeleteMemberCommand.class.getCanonicalName() + "{targetIndex=" + targetIndex + "}";
+        assertEquals(expected, deleteMemberCommand.toString());
     }
 
     /**
-     * Updates {@code model}'s filtered list to show no one.
+     * Updates {@code model}'s filtered member list to show no one.
      */
     private void showNoMember(Model model) {
         model.updateFilteredMemberList(p -> false);
