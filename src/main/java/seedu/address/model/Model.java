@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
+import seedu.address.model.event.Event;
 import seedu.address.model.member.Member;
 
 /**
@@ -76,8 +77,12 @@ public interface Model {
      */
     void setMember(Member target, Member editedMember);
 
+    void deleteEvent(Event target);
+
     /** Returns an unmodifiable view of the filtered member list */
     ObservableList<Member> getFilteredMemberList();
+
+    ObservableList<Event> getFilteredEventList();
 
     /**
      * Updates the filter of the filtered member list to filter by the given {@code predicate}.
