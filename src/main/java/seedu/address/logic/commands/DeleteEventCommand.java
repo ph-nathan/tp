@@ -21,8 +21,8 @@ public class DeleteEventCommand extends Command {
             + ": Deletes the event identified by the index number used in the displayed event list.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
-    private final Index targetIndex;
     public static final String MESSAGE_DELETE_EVENT_SUCCESS = "Deleted Event: %1$s";
+    private final Index targetIndex;
 
     public DeleteEventCommand(Index targetIndex) {
         this.targetIndex = targetIndex;

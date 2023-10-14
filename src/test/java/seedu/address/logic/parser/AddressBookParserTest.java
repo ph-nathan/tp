@@ -51,14 +51,14 @@ public class AddressBookParserTest {
     @Test
     public void parseCommand_deleteMember() throws Exception {
         DeleteMemberCommand command = (DeleteMemberCommand) parser.parseCommand(
-                DeleteCommand.COMMAND_WORD + " /member " + INDEX_FIRST_MEMBER.getOneBased());
+                DeleteMemberCommand.COMMAND_WORD + " " + INDEX_FIRST_MEMBER.getOneBased());
         assertEquals(new DeleteMemberCommand(INDEX_FIRST_MEMBER), command);
     }
 
     @Test
     public void parseCommand_deleteEvent() throws Exception {
         DeleteEventCommand command = (DeleteEventCommand) parser.parseCommand(
-                DeleteCommand.COMMAND_WORD + " /event " + INDEX_FIRST_MEMBER.getOneBased());
+                DeleteEventCommand.COMMAND_WORD + " " + INDEX_FIRST_EVENT.getOneBased());
         assertEquals(new DeleteEventCommand(INDEX_FIRST_EVENT), command);
     }
 

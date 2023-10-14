@@ -21,8 +21,8 @@ public class DeleteMemberCommand extends Command {
             + ": Deletes the member identified by the index number used in the displayed member list.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
-    private final Index targetIndex;
     public static final String MESSAGE_DELETE_MEMBER_SUCCESS = "Deleted Member: %1$s";
+    private final Index targetIndex;
 
     public DeleteMemberCommand(Index targetIndex) {
         this.targetIndex = targetIndex;

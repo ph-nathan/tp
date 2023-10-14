@@ -4,10 +4,12 @@ import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.DeleteEventCommand;
-import seedu.address.logic.commands.DeleteMemberCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 
-public class DeleteEventCommandParser implements Parser<DeleteEventCommand>{
+/**
+ * Parses input arguments and creates a new DeleteEventCommand object
+ */
+public class DeleteEventCommandParser implements Parser<DeleteEventCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the DeleteEventCommand
      * and returns a DeleteEventCommand object for execution.
