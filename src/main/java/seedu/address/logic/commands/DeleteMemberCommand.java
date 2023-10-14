@@ -13,10 +13,10 @@ import seedu.address.model.member.Member;
 /**
  * Deletes a member identified using its displayed index from CCACommander.
  */
-public class DeletePersonCommand extends DeleteCommand{
+public class DeleteMemberCommand extends DeleteCommand{
     public static final String MESSAGE_DELETE_MEMBER_SUCCESS = "Deleted Member: %1$s";
 
-    public DeletePersonCommand(Index targetIndex) {
+    public DeleteMemberCommand(Index targetIndex) {
         super(targetIndex);
     }
 
@@ -41,11 +41,11 @@ public class DeletePersonCommand extends DeleteCommand{
         }
 
         // instanceof handles nulls
-        if (!(other instanceof DeletePersonCommand)) {
+        if (!(other instanceof DeleteMemberCommand)) {
             return false;
         }
 
-        DeletePersonCommand otherDeletePersonCommand = (DeletePersonCommand) other;
-        return targetIndex.equals(otherDeletePersonCommand.targetIndex);
+        DeleteMemberCommand otherDeleteMemberCommand = (DeleteMemberCommand) other;
+        return targetIndex.equals(otherDeleteMemberCommand.targetIndex);
     }
 }

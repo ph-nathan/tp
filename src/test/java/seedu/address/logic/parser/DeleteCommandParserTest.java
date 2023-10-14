@@ -3,11 +3,14 @@ package seedu.address.logic.parser;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_EVENT;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_MEMBER;
 
 import org.junit.jupiter.api.Test;
 
 import seedu.address.logic.commands.DeleteCommand;
+import seedu.address.logic.commands.DeleteEventCommand;
+import seedu.address.logic.commands.DeleteMemberCommand;
 
 /**
  * As we are only doing white-box testing, our test cases do not cover path variations
@@ -21,8 +24,13 @@ public class DeleteCommandParserTest {
     private DeleteCommandParser parser = new DeleteCommandParser();
 
     @Test
-    public void parse_validArgs_returnsDeleteCommand() {
-        assertParseSuccess(parser, "1", new DeleteCommand(INDEX_FIRST_MEMBER));
+    public void parse_validArgs_returnsDeleteEventCommand() {
+        assertParseSuccess(parser, "/delete 1", new DeleteEventCommand(INDEX_FIRST_EVENT));
+    }
+
+    @Test
+    public void parse_validArgs_returnsDeleteMemberCommand() {
+        assertParseSuccess(parser, "/delete 1", new DeleteMemberCommand(INDEX_FIRST_MEMBER));
     }
 
     @Test

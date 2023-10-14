@@ -5,7 +5,7 @@ import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.DeleteCommand;
 import seedu.address.logic.commands.DeleteEventCommand;
-import seedu.address.logic.commands.DeletePersonCommand;
+import seedu.address.logic.commands.DeleteMemberCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**
@@ -28,8 +28,8 @@ public class DeleteCommandParser implements Parser<DeleteCommand> {
             indexString = argArray[1];
             index = ParserUtil.parseIndex(indexString);
 
-            if (classSpecifierString.equals("/person")) {
-                return new DeletePersonCommand(index);
+            if (classSpecifierString.equals("/member")) {
+                return new DeleteMemberCommand(index);
             } else if (classSpecifierString.equals("/event")) {
                 return new DeleteEventCommand(index);
             } else {
