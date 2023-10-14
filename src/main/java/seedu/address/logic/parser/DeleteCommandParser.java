@@ -22,6 +22,7 @@ public class DeleteCommandParser implements Parser<DeleteCommand> {
         try {
             Index index;
             String classSpecifierString, indexString;
+            // Splits the argument into the class specifier (member/event) and index
             String[] argArray = args.split(" ");
             classSpecifierString = argArray[0];
             indexString = argArray[1];

@@ -10,6 +10,9 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.event.Event;
 
+/**
+ * Deletes an event identified using its displayed index from CCACommander.
+ */
 public class DeleteEventCommand extends DeleteCommand {
     public static final String MESSAGE_DELETE_EVENT_SUCCESS = "Deleted Event: %1$s";
 
@@ -38,7 +41,7 @@ public class DeleteEventCommand extends DeleteCommand {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof DeleteCommand)) {
+        if (!(other instanceof DeleteEventCommand)) {
             return false;
         }
 
