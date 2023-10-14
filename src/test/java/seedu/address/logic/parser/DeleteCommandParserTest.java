@@ -8,7 +8,6 @@ import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_MEMBER;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.logic.commands.DeleteCommand;
 import seedu.address.logic.commands.DeleteEventCommand;
 import seedu.address.logic.commands.DeleteMemberCommand;
 
