@@ -165,11 +165,11 @@ public class LogicManagerTest {
         logic = new LogicManager(model, storage);
 
         // Triggers the saveAddressBook method by executing an add command
-        String CreateMemberCommand = CreateMemberCommand.COMMAND_WORD + NAME_DESC_AMY + PHONE_DESC_AMY
+        String createMemberCommand = CreateMemberCommand.COMMAND_WORD + NAME_DESC_AMY + PHONE_DESC_AMY
                 + EMAIL_DESC_AMY + ADDRESS_DESC_AMY;
         Member expectedMember = new MemberBuilder(AMY).withTags().build();
         ModelManager expectedModel = new ModelManager();
         expectedModel.addMember(expectedMember);
-        assertCommandFailure(CreateMemberCommand, CommandException.class, expectedMessage, expectedModel);
+        assertCommandFailure(createMemberCommand, CommandException.class, expectedMessage, expectedModel);
     }
 }
