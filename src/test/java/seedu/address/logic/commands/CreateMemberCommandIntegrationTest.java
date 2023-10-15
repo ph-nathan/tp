@@ -31,7 +31,7 @@ public class CreateMemberCommandIntegrationTest {
         Member validMember = new MemberBuilder().build();
 
         Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
-        expectedModel.addMember(validMember);
+        expectedModel.createMember(validMember);
 
         assertCommandSuccess(new CreateMemberCommand(validMember), model,
                 String.format(CreateMemberCommand.MESSAGE_SUCCESS, Messages.format(validMember)),

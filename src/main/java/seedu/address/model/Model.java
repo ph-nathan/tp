@@ -68,7 +68,7 @@ public interface Model {
      * Adds the given member.
      * {@code member} must not already exist in the address book.
      */
-    void addMember(Member member);
+    void createMember(Member member);
 
     /**
      * Replaces the given member {@code target} with {@code editedMember}.

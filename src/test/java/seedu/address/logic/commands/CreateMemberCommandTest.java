@@ -121,7 +121,7 @@ public class CreateMemberCommandTest {
         }
 
         @Override
-        public void addMember(Member member) {
+        public void createMember(Member member) {
             throw new AssertionError("This method should not be called.");
         }
 
@@ -207,7 +207,7 @@ public class CreateMemberCommandTest {
         }
 
         @Override
-        public void addMember(Member member) {
+        public void createMember(Member member) {
             requireNonNull(member);
             membersAdded.add(member);
         }

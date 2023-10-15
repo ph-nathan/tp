@@ -56,7 +56,7 @@ public class CreateMemberCommand extends Command {
             throw new CommandException(MESSAGE_DUPLICATE_MEMBER);
         }
 
-        model.addMember(toAdd);
+        model.createMember(toAdd);
         return new CommandResult(String.format(MESSAGE_SUCCESS, Messages.format(toAdd)));
     }
 
