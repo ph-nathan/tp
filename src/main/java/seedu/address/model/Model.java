@@ -77,7 +77,18 @@ public interface Model {
      */
     void setMember(Member target, Member editedMember);
 
+    /**
+     * Returns true if a event with the same identity as {@code event} exists in CCACommander.
+     */
+    boolean hasEvent(Event event);
+
     void deleteEvent(Event target);
+
+    /**
+     * Creates the given event.
+     * {@code event} must not already exist in the address book.
+     */
+    void createEvent(Event event);
 
     /** Returns an unmodifiable view of the filtered member list */
     ObservableList<Member> getFilteredMemberList();
