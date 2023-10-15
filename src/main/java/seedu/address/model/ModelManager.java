@@ -19,11 +19,9 @@ import seedu.address.model.member.Member;
  */
 public class ModelManager implements Model {
     private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
-
     private final AddressBook addressBook;
     private final UserPrefs userPrefs;
     private final FilteredList<Member> filteredMembers;
-
     private final FilteredList<Event> filteredEvents;
 
     /**
