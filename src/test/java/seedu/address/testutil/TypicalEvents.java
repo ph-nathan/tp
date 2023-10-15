@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import seedu.address.model.AddressBook;
 import seedu.address.model.event.Event;
 
 /**
@@ -36,17 +35,6 @@ public class TypicalEvents {
     public static final String KEYWORD_MATCHING_FESTIVAL = "Festival"; // A keyword that matches Festival
 
     private TypicalEvents() {} // prevents instantiation
-
-    /**
-     * Returns an {@code AddressBook} with all the typical events.
-     */
-    public static AddressBook getTypicalAddressBook() {
-        AddressBook ab = new AddressBook();
-        for (Event event: getTypicalEvents()) {
-            ab.addEvent(event);
-        }
-        return ab;
-    }
 
     public static List<Event> getTypicalEvents() {
         return new ArrayList<>(Arrays.asList(AURORA_BOREALIS, BOXING_DAY, CHINESE_NEW_YEAR, DOG_DAY, ECHO_DAY,

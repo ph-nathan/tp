@@ -9,40 +9,37 @@ import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-import seedu.address.model.member.Member;
+import seedu.address.model.event.Event;
 
 /**
- * Deletes a member identified using it's displayed index from the address book.
+ * Deletes an event identified using its displayed index from CCACommander.
  */
-public class DeleteCommand extends Command {
-
-    public static final String COMMAND_WORD = "delete";
+public class DeleteEventCommand extends Command {
+    public static final String COMMAND_WORD = "deleteEvent";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Deletes the member identified by the index number used in the displayed member list.\n"
+            + ": Deletes the event identified by the index number used in the displayed event list.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
-
-    public static final String MESSAGE_DELETE_MEMBER_SUCCESS = "Deleted Member: %1$s";
-
+    public static final String MESSAGE_DELETE_EVENT_SUCCESS = "Deleted Event: %1$s";
     private final Index targetIndex;
 
-    public DeleteCommand(Index targetIndex) {
+    public DeleteEventCommand(Index targetIndex) {
         this.targetIndex = targetIndex;
     }
 
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
-        List<Member> lastShownList = model.getFilteredMemberList();
+        List<Event> lastShownList = model.getFilteredEventList();
 
         if (targetIndex.getZeroBased() >= lastShownList.size()) {
-            throw new CommandException(Messages.MESSAGE_INVALID_MEMBER_DISPLAYED_INDEX);
+            throw new CommandException(Messages.MESSAGE_INVALID_EVENT_DISPLAYED_INDEX);
         }
 
-        Member memberToDelete = lastShownList.get(targetIndex.getZeroBased());
-        model.deleteMember(memberToDelete);
-        return new CommandResult(String.format(MESSAGE_DELETE_MEMBER_SUCCESS, Messages.format(memberToDelete)));
+        Event eventToDelete = lastShownList.get(targetIndex.getZeroBased());
+        model.deleteEvent(eventToDelete);
+        return new CommandResult(String.format(MESSAGE_DELETE_EVENT_SUCCESS, Messages.format(eventToDelete)));
     }
 
     @Override
@@ -52,12 +49,12 @@ public class DeleteCommand extends Command {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof DeleteCommand)) {
+        if (!(other instanceof DeleteEventCommand)) {
             return false;
         }
 
-        DeleteCommand otherDeleteCommand = (DeleteCommand) other;
-        return targetIndex.equals(otherDeleteCommand.targetIndex);
+        DeleteEventCommand otherDeleteEventCommand = (DeleteEventCommand) other;
+        return targetIndex.equals(otherDeleteEventCommand.targetIndex);
     }
 
     @Override
