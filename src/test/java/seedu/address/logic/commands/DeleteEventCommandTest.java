@@ -97,7 +97,7 @@ public class DeleteEventCommandTest {
         // null -> returns false
         assertFalse(deleteEventFirstCommand.equals(null));
 
-        // different member -> returns false
+        // different event -> returns false
         assertFalse(deleteEventFirstCommand.equals(deleteEventSecondCommand));
     }
 
