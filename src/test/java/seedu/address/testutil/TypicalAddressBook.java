@@ -17,7 +17,7 @@ public class TypicalAddressBook {
     public static AddressBook getTypicalAddressBook() {
         AddressBook ab = new AddressBook();
         for (Member member : getTypicalMembers()) {
-            ab.addMember(member);
+            ab.createMember(member);
         }
 
         for (Event event: getTypicalEvents()) {
