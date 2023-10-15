@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
 import static seedu.address.logic.commands.CommandTestUtil.showEventAtIndex;
+import static seedu.address.testutil.TypicalAddressBook.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_EVENT;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_EVENT;
-import static seedu.address.testutil.TypicalMembers.getTypicalAddressBook;
 
 import org.junit.jupiter.api.Test;
 
@@ -46,7 +46,7 @@ public class DeleteEventCommandTest {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredEventList().size() + 1);
         DeleteEventCommand deleteEventCommand = new DeleteEventCommand(outOfBoundIndex);
 
-        assertCommandFailure(deleteEventCommand, model, Messages.MESSAGE_INVALID_MEMBER_DISPLAYED_INDEX);
+        assertCommandFailure(deleteEventCommand, model, Messages.MESSAGE_INVALID_EVENT_DISPLAYED_INDEX);
     }
 
     @Test
@@ -72,7 +72,7 @@ public class DeleteEventCommandTest {
 
         Index outOfBoundIndex = INDEX_SECOND_EVENT;
         // ensures that outOfBoundIndex is still in bounds of address book list
-        assertTrue(outOfBoundIndex.getZeroBased() < model.getAddressBook().getMemberList().size());
+        assertTrue(outOfBoundIndex.getZeroBased() < model.getAddressBook().getEventList().size());
 
         DeleteEventCommand deleteEventCommand = new DeleteEventCommand(outOfBoundIndex);
 

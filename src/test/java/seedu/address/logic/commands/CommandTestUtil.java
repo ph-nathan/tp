@@ -142,9 +142,9 @@ public class CommandTestUtil {
         assertTrue(targetIndex.getZeroBased() < model.getFilteredEventList().size());
 
         Event event = model.getFilteredEventList().get(targetIndex.getZeroBased());
-        model.updateFilteredEventList(new EventNameContainsKeywordsPredicate(
-                Arrays.asList(event.getName().toString())));
+        final String[] splitName = event.getName().eventName.split("\\s+");
+        model.updateFilteredEventList(new EventNameContainsKeywordsPredicate(Arrays.asList(splitName[0])));
 
-        assertEquals(1, model.getFilteredMemberList().size());
+        assertEquals(1, model.getFilteredEventList().size());
     }
 }
