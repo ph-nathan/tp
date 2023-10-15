@@ -47,10 +47,11 @@ public class CreateMemberCommandTest {
     @Test
     public void execute_duplicateMember_throwsCommandException() {
         Member validMember = new MemberBuilder().build();
-        CreateMemberCommand CreateMemberCommand = new CreateMemberCommand(validMember);
+        CreateMemberCommand createMemberCommand = new CreateMemberCommand(validMember);
         ModelStub modelStub = new ModelStubWithMember(validMember);
 
-        assertThrows(CommandException.class, CreateMemberCommand.MESSAGE_DUPLICATE_MEMBER, () -> CreateMemberCommand.execute(modelStub));
+        assertThrows(CommandException.class, CreateMemberCommand.MESSAGE_DUPLICATE_MEMBER,
+                () -> createMemberCommand.execute(modelStub));
     }
 
     @Test
@@ -79,9 +80,9 @@ public class CreateMemberCommandTest {
 
     @Test
     public void toStringMethod() {
-        CreateMemberCommand CreateMemberCommand = new CreateMemberCommand(ALICE);
+        CreateMemberCommand createMemberCommand = new CreateMemberCommand(ALICE);
         String expected = CreateMemberCommand.class.getCanonicalName() + "{toAdd=" + ALICE + "}";
-        assertEquals(expected, CreateMemberCommand.toString());
+        assertEquals(expected, createMemberCommand.toString());
     }
 
     /**
