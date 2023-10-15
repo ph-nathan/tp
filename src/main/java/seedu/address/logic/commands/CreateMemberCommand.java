@@ -18,9 +18,9 @@ import seedu.address.model.member.Member;
  */
 public class CreateMemberCommand extends Command {
 
-    public static final String COMMAND_WORD = "add";
+    public static final String COMMAND_WORD = "createMember";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a member to the address book. "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a member to CCACommander. "
             + "Parameters: "
             + PREFIX_NAME + "NAME "
             + PREFIX_PHONE + "PHONE "
