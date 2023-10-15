@@ -10,9 +10,9 @@ import static seedu.address.logic.commands.CommandTestUtil.VALID_LOCATION_AURORA
 import static seedu.address.logic.commands.CommandTestUtil.VALID_LOCATION_BOXING;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
 import static seedu.address.testutil.Assert.assertThrows;
+import static seedu.address.testutil.TypicalAddressBook.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalEvents.AURORA_BOREALIS;
 import static seedu.address.testutil.TypicalMembers.ALICE;
-import static seedu.address.testutil.TypicalMembers.getTypicalAddressBook;
 
 import java.util.Arrays;
 import java.util.Collection;
