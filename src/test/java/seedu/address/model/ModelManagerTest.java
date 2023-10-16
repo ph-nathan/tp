@@ -84,7 +84,7 @@ public class ModelManagerTest {
 
     @Test
     public void hasMember_memberInAddressBook_returnsTrue() {
-        modelManager.addMember(ALICE);
+        modelManager.createMember(ALICE);
         assertTrue(modelManager.hasMember(ALICE));
     }
 
