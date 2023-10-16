@@ -33,7 +33,8 @@ public class MemberNameContainsKeywordsPredicate implements Predicate<Member> {
             return false;
         }
 
-        MemberNameContainsKeywordsPredicate otherMemberNameContainsKeywordsPredicate = (MemberNameContainsKeywordsPredicate) other;
+        MemberNameContainsKeywordsPredicate otherMemberNameContainsKeywordsPredicate =
+                (MemberNameContainsKeywordsPredicate) other;
         return keywords.equals(otherMemberNameContainsKeywordsPredicate.keywords);
     }
 
