@@ -84,7 +84,7 @@ public class AddressBook implements ReadOnlyAddressBook {
      * Adds a member to the address book.
      * The member must not already exist in the address book.
      */
-    public void addMember(Member m) {
+    public void createMember(Member m) {
         members.add(m);
     }
 
