@@ -9,8 +9,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventDate;
-import seedu.address.model.event.Name;
 import seedu.address.model.event.Location;
+import seedu.address.model.shared.Name;
 
 /**
  * Jackson-friendly version of {@link Event}.
