@@ -14,6 +14,7 @@ import seedu.address.model.member.Member;
 public interface Model {
     /** {@code Predicate} that always evaluate to true */
     Predicate<Member> PREDICATE_SHOW_ALL_MEMBERS = unused -> true;
+    Predicate<Event> PREDICATE_SHOW_ALL_EVENTS = unused -> true;
 
     /**
      * Replaces user prefs data with the data in {@code userPrefs}.
@@ -89,6 +90,13 @@ public interface Model {
      * {@code event} must not already exist in the address book.
      */
     void createEvent(Event event);
+
+    /**
+     * Replaces the given event {@code target} with {@code editedEvent}.
+     * {@code target} must exist in CCACommander.
+     * The member identity of {@code editedEvent} must not be the same as another existing event in CCACommander.
+     */
+    void setEvent(Event target, Event editedEvent);
 
     /** Returns an unmodifiable view of the filtered member list */
     ObservableList<Member> getFilteredMemberList();
