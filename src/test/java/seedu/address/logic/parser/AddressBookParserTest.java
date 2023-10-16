@@ -26,7 +26,7 @@ import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.ListCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.member.Member;
-import seedu.address.model.member.NameContainsKeywordsPredicate;
+import seedu.address.model.shared.NameContainsKeywordsPredicate;
 import seedu.address.testutil.EditMemberDescriptorBuilder;
 import seedu.address.testutil.MemberBuilder;
 import seedu.address.testutil.MemberUtil;

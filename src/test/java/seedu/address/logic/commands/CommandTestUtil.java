@@ -20,7 +20,7 @@ import seedu.address.model.Model;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventNameContainsKeywordsPredicate;
 import seedu.address.model.member.Member;
-import seedu.address.model.member.NameContainsKeywordsPredicate;
+import seedu.address.model.shared.NameContainsKeywordsPredicate;
 import seedu.address.testutil.EditMemberDescriptorBuilder;
 
 /**
