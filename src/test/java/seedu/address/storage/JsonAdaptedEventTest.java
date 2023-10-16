@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.event.EventDate;
-import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;
+import seedu.address.model.shared.Name;
 
 public class JsonAdaptedEventTest {
     private static final String INVALID_NAME = "µ@18Tur";
@@ -30,14 +30,14 @@ public class JsonAdaptedEventTest {
     public void toModelType_invalidName_throwsIllegalValueException() {
         JsonAdaptedEvent event =
                 new JsonAdaptedEvent(INVALID_NAME, VALID_DATE, VALID_LOCATION);
-        String expectedMessage = EventName.MESSAGE_CONSTRAINTS;
+        String expectedMessage = Name.MESSAGE_CONSTRAINTS;
         assertThrows(IllegalValueException.class, expectedMessage, event::toModelType);
     }
 
     @Test
     public void toModelType_nullName_throwsIllegalValueException() {
         JsonAdaptedEvent event = new JsonAdaptedEvent(null, VALID_DATE, VALID_LOCATION);
-        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, EventName.class.getSimpleName());
+        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, Name.class.getSimpleName());
         assertThrows(IllegalValueException.class, expectedMessage, event::toModelType);
     }
 

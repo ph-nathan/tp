@@ -20,7 +20,7 @@ import seedu.address.model.Model;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventNameContainsKeywordsPredicate;
 import seedu.address.model.member.Member;
-import seedu.address.model.member.NameContainsKeywordsPredicate;
+import seedu.address.model.member.MemberNameContainsKeywordsPredicate;
 import seedu.address.testutil.EditMemberDescriptorBuilder;
 
 /**
@@ -128,8 +128,8 @@ public class CommandTestUtil {
         assertTrue(targetIndex.getZeroBased() < model.getFilteredMemberList().size());
 
         Member member = model.getFilteredMemberList().get(targetIndex.getZeroBased());
-        final String[] splitName = member.getName().fullName.split("\\s+");
-        model.updateFilteredMemberList(new NameContainsKeywordsPredicate(Arrays.asList(splitName[0])));
+        final String[] splitName = member.getName().name.split("\\s+");
+        model.updateFilteredMemberList(new MemberNameContainsKeywordsPredicate(Arrays.asList(splitName[0])));
 
         assertEquals(1, model.getFilteredMemberList().size());
     }
@@ -142,7 +142,7 @@ public class CommandTestUtil {
         assertTrue(targetIndex.getZeroBased() < model.getFilteredEventList().size());
 
         Event event = model.getFilteredEventList().get(targetIndex.getZeroBased());
-        final String[] splitName = event.getName().eventName.split("\\s+");
+        final String[] splitName = event.getName().name.split("\\s+");
         model.updateFilteredEventList(new EventNameContainsKeywordsPredicate(Arrays.asList(splitName[0])));
 
         assertEquals(1, model.getFilteredEventList().size());

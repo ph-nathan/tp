@@ -9,8 +9,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventDate;
-import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;
+import seedu.address.model.shared.Name;
 
 /**
  * Jackson-friendly version of {@link Event}.
@@ -19,7 +19,7 @@ class JsonAdaptedEvent {
 
     public static final String MISSING_FIELD_MESSAGE_FORMAT = "Event's %s field is missing!";
 
-    private final String eventName;
+    private final String name;
     private final String eventDate;
     private final String location;
     private final List<JsonAdaptedTag> tags = new ArrayList<>();
@@ -28,9 +28,9 @@ class JsonAdaptedEvent {
      * Constructs a {@code JsonAdaptedEvent} with the given event details.
      */
     @JsonCreator
-    public JsonAdaptedEvent(@JsonProperty("eventName") String name, @JsonProperty("eventDate") String eventDate,
+    public JsonAdaptedEvent(@JsonProperty("name") String name, @JsonProperty("eventDate") String eventDate,
                              @JsonProperty("location") String location) {
-        this.eventName = name;
+        this.name = name;
         this.eventDate = eventDate;
         this.location = location;
     }
@@ -39,7 +39,7 @@ class JsonAdaptedEvent {
      * Converts a given {@code Event} into this class for Jackson use.
      */
     public JsonAdaptedEvent(Event source) {
-        eventName = source.getName().eventName;
+        name = source.getName().name;
         eventDate = source.getDate().date.toString();
         location = source.getLocation().value;
     }
@@ -50,14 +50,14 @@ class JsonAdaptedEvent {
      * @throws IllegalValueException if there were any data constraints violated in the adapted event.
      */
     public Event toModelType() throws IllegalValueException {
-        if (eventName == null) {
+        if (name == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,
-                    EventName.class.getSimpleName()));
+                    Name.class.getSimpleName()));
         }
-        if (!EventName.isValidName(eventName)) {
-            throw new IllegalValueException(EventName.MESSAGE_CONSTRAINTS);
+        if (!Name.isValidName(name)) {
+            throw new IllegalValueException(Name.MESSAGE_CONSTRAINTS);
         }
-        final EventName modelName = new EventName(eventName);
+        final Name modelName = new Name(name);
 
         if (eventDate == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,

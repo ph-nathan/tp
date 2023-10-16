@@ -48,7 +48,7 @@ public class MemberCard extends UiPart<Region> {
         super(FXML);
         this.member = member;
         id.setText(displayedIndex + ". ");
-        name.setText(member.getName().fullName);
+        name.setText(member.getName().name);
         phone.setText(member.getPhone().value);
         address.setText(member.getAddress().value);
         email.setText(member.getEmail().value);
