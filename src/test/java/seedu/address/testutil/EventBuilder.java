@@ -2,8 +2,8 @@ package seedu.address.testutil;
 
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventDate;
-import seedu.address.model.event.Name;
 import seedu.address.model.event.Location;
+import seedu.address.model.shared.Name;
 
 /**
  * A utility class to help with building Events objects.

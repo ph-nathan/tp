@@ -1,26 +1,26 @@
-package seedu.address.model.shared;
-
-import java.util.List;
-import java.util.function.Predicate;
+package seedu.address.model.event;
 
 import seedu.address.commons.util.StringUtil;
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.model.member.Member;
 
+import java.util.List;
+import java.util.function.Predicate;
+
 /**
  * Tests that a {@code Member}'s {@code Name} matches any of the keywords given.
  */
-public class NameContainsKeywordsPredicate implements Predicate<Member> {
+public class EventNameContainsKeywordsPredicate implements Predicate<Event> {
     private final List<String> keywords;
 
-    public NameContainsKeywordsPredicate(List<String> keywords) {
+    public EventNameContainsKeywordsPredicate(List<String> keywords) {
         this.keywords = keywords;
     }
 
     @Override
-    public boolean test(Member member) {
+    public boolean test(Event event) {
         return keywords.stream()
-                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(member.getName().name, keyword));
+                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(event.getName().name, keyword));
     }
 
     @Override
@@ -30,12 +30,12 @@ public class NameContainsKeywordsPredicate implements Predicate<Member> {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof NameContainsKeywordsPredicate)) {
+        if (!(other instanceof EventNameContainsKeywordsPredicate)) {
             return false;
         }
 
-        NameContainsKeywordsPredicate otherNameContainsKeywordsPredicate = (NameContainsKeywordsPredicate) other;
-        return keywords.equals(otherNameContainsKeywordsPredicate.keywords);
+        EventNameContainsKeywordsPredicate otherMemberNameContainsKeywordsPredicate = (EventNameContainsKeywordsPredicate) other;
+        return keywords.equals(otherMemberNameContainsKeywordsPredicate.keywords);
     }
 
     @Override
