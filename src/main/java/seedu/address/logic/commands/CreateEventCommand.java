@@ -18,9 +18,11 @@ public class CreateEventCommand extends Command {
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Creates an event in CCACommander. "
             + "Parameters: "
+            + PREFIX_NAME + "NAME "
             + PREFIX_LOCATION + "LOCATION "
             + PREFIX_DATE + "DATE "
             + "Example: " + COMMAND_WORD + " "
+            + PREFIX_NAME + "Party "
             + PREFIX_LOCATION + "Raffles Hall "
             + PREFIX_DATE + "2023-10-16 ";
 
