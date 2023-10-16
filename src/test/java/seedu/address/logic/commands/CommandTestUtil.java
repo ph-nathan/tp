@@ -18,7 +18,7 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.AddressBook;
 import seedu.address.model.Model;
 import seedu.address.model.event.Event;
-import seedu.address.model.event.EventNameContainsKeywordsPredicate;
+import seedu.address.model.event.NameContainsKeywordsPredicate;
 import seedu.address.model.member.Member;
 import seedu.address.model.shared.NameContainsKeywordsPredicate;
 import seedu.address.testutil.EditMemberDescriptorBuilder;
@@ -142,8 +142,8 @@ public class CommandTestUtil {
         assertTrue(targetIndex.getZeroBased() < model.getFilteredEventList().size());
 
         Event event = model.getFilteredEventList().get(targetIndex.getZeroBased());
-        final String[] splitName = event.getName().eventName.split("\\s+");
-        model.updateFilteredEventList(new EventNameContainsKeywordsPredicate(Arrays.asList(splitName[0])));
+        final String[] splitName = event.getName().name.split("\\s+");
+        model.updateFilteredEventList(new NameContainsKeywordsPredicate(Arrays.asList(splitName[0])));
 
         assertEquals(1, model.getFilteredEventList().size());
     }

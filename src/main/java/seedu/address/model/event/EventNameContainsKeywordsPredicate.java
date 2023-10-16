@@ -9,17 +9,17 @@ import seedu.address.commons.util.ToStringBuilder;
 /**
  * Tests that a {@code Event}'s {@code Name} matches any of the keywords given.
  */
-public class EventNameContainsKeywordsPredicate implements Predicate<Event> {
+public class NameContainsKeywordsPredicate implements Predicate<Event> {
     private final List<String> keywords;
 
-    public EventNameContainsKeywordsPredicate(List<String> keywords) {
+    public NameContainsKeywordsPredicate(List<String> keywords) {
         this.keywords = keywords;
     }
 
     @Override
     public boolean test(Event event) {
         return keywords.stream()
-                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(event.getName().eventName, keyword));
+                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(event.getName().name, keyword));
     }
 
     @Override
@@ -29,13 +29,13 @@ public class EventNameContainsKeywordsPredicate implements Predicate<Event> {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof EventNameContainsKeywordsPredicate)) {
+        if (!(other instanceof NameContainsKeywordsPredicate)) {
             return false;
         }
 
-        EventNameContainsKeywordsPredicate otherEventNameContainsKeywordsPredicate =
-                (EventNameContainsKeywordsPredicate) other;
-        return keywords.equals(otherEventNameContainsKeywordsPredicate.keywords);
+        NameContainsKeywordsPredicate otherNameContainsKeywordsPredicate =
+                (NameContainsKeywordsPredicate) other;
+        return keywords.equals(otherNameContainsKeywordsPredicate.keywords);
     }
 
     @Override
