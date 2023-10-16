@@ -164,7 +164,7 @@ public class LogicManagerTest {
 
         logic = new LogicManager(model, storage);
 
-        // Triggers the saveAddressBook method by executing an add command
+        // Triggers the saveAddressBook method by executing a create command
         String createMemberCommand = CreateMemberCommand.COMMAND_WORD + NAME_DESC_AMY + PHONE_DESC_AMY
                 + EMAIL_DESC_AMY + ADDRESS_DESC_AMY;
         Member expectedMember = new MemberBuilder(AMY).withTags().build();

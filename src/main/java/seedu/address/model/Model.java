@@ -65,7 +65,7 @@ public interface Model {
     void deleteMember(Member target);
 
     /**
-     * Adds the given member.
+     * Creates the given member.
      * {@code member} must not already exist in the address book.
      */
     void createMember(Member member);
