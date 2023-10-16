@@ -5,6 +5,7 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 import java.util.Objects;
 
 import seedu.address.commons.util.ToStringBuilder;
+import seedu.address.model.shared.Name;
 
 /**
  * Represents an Event in the address book.
@@ -13,7 +14,7 @@ import seedu.address.commons.util.ToStringBuilder;
 public class Event {
 
     // Identity fields
-    private final EventName eventName;
+    private final Name name;
 
     // Data fields
     private final Location location;
@@ -22,15 +23,15 @@ public class Event {
     /**
      * Every field must be present and not null.
      */
-    public Event(EventName eventName, EventDate eventDate, Location location) {
-        requireAllNonNull(eventName, eventDate, location);
-        this.eventName = eventName;
+    public Event(Name name, EventDate eventDate, Location location) {
+        requireAllNonNull(name, eventDate, location);
+        this.name = name;
         this.eventDate = eventDate;
         this.location = location;
     }
 
-    public EventName getName() {
-        return this.eventName;
+    public Name getName() {
+        return this.name;
     }
 
     public Location getLocation() {
@@ -71,7 +72,7 @@ public class Event {
         }
 
         Event otherEvent = (Event) other;
-        return this.eventName.equals(otherEvent.eventName)
+        return this.name.equals(otherEvent.name)
                 && this.location.equals(otherEvent.location)
                 && this.eventDate.equals(otherEvent.eventDate);
     }
@@ -79,13 +80,13 @@ public class Event {
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(this.eventName, this.location, this.eventDate);
+        return Objects.hash(this.name, this.location, this.eventDate);
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .add("name", eventName)
+                .add("name", name)
                 .add("date", eventDate)
                 .add("location", location)
                 .toString();
