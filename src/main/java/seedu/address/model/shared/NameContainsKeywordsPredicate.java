@@ -20,7 +20,7 @@ public class NameContainsKeywordsPredicate implements Predicate<Member> {
     @Override
     public boolean test(Member member) {
         return keywords.stream()
-                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(member.getName().fullName, keyword));
+                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(member.getName().name, keyword));
     }
 
     @Override

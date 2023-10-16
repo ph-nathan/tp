@@ -50,7 +50,7 @@ class JsonAdaptedMember {
      * Converts a given {@code Member} into this class for Jackson use.
      */
     public JsonAdaptedMember(Member source) {
-        name = source.getName().fullName;
+        name = source.getName().name;
         phone = source.getPhone().value;
         email = source.getEmail().value;
         address = source.getAddress().value;
