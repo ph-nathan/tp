@@ -36,7 +36,7 @@ public class AddressBookParserTest {
     private final AddressBookParser parser = new AddressBookParser();
 
     @Test
-    public void parseCommand_add() throws Exception {
+    public void parseCommand_create() throws Exception {
         Member member = new MemberBuilder().build();
         CreateMemberCommand command = (CreateMemberCommand) parser.parseCommand(
                 MemberUtil.getCreateMemberCommand(member));
