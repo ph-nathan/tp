@@ -73,7 +73,13 @@ public class EventTest {
         assertFalse(AURORA_BOREALIS.equals(editedAurora));
 
     }
-
+    @Test
+    public void test_equalObjectsHaveSameHashCode() {
+        Event auroraCopy1 = new EventBuilder(AURORA_BOREALIS).build();
+        Event auroraCopy2 = new EventBuilder(AURORA_BOREALIS).build();
+        assertEquals(auroraCopy1.hashCode(), auroraCopy1.hashCode());
+        assertEquals(auroraCopy1.hashCode(), auroraCopy2.hashCode());
+    }
     @Test
     public void toStringMethod() {
         String expected = Event.class.getCanonicalName() + "{name=" + AURORA_BOREALIS.getName()

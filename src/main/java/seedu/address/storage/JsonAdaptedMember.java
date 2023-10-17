@@ -13,8 +13,8 @@ import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.member.Address;
 import seedu.address.model.member.Email;
 import seedu.address.model.member.Member;
-import seedu.address.model.member.Name;
 import seedu.address.model.member.Phone;
+import seedu.address.model.shared.Name;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -50,7 +50,7 @@ class JsonAdaptedMember {
      * Converts a given {@code Member} into this class for Jackson use.
      */
     public JsonAdaptedMember(Member source) {
-        name = source.getName().fullName;
+        name = source.getName().name;
         phone = source.getPhone().value;
         email = source.getEmail().value;
         address = source.getAddress().value;

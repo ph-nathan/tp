@@ -2,8 +2,8 @@ package seedu.address.testutil;
 
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventDate;
-import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;
+import seedu.address.model.shared.Name;
 
 /**
  * A utility class to help with building Events objects.
@@ -14,7 +14,7 @@ public class EventBuilder {
     public static final String DEFAULT_EVENT_DATE = "2023-12-08";
     public static final String DEFAULT_LOCATION = "NUS COM3";
 
-    private EventName name;
+    private Name name;
     private EventDate date;
     private Location location;
 
@@ -22,7 +22,7 @@ public class EventBuilder {
      * Creates a {@code EventBuilder} with the default details.
      */
     public EventBuilder() {
-        name = new EventName(DEFAULT_EVENT_NAME);
+        name = new Name(DEFAULT_EVENT_NAME);
         date = new EventDate(DEFAULT_EVENT_DATE);
         location = new Location(DEFAULT_LOCATION);
     }
@@ -40,7 +40,7 @@ public class EventBuilder {
      * Sets the {@code Name} of the {@code Event} that we are building.
      */
     public EventBuilder withName(String name) {
-        this.name = new EventName(name);
+        this.name = new Name(name);
         return this;
     }
 
