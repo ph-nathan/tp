@@ -1,0 +1,39 @@
+{
+  "_comment": "AddressBook save file which contains the same Event values as in TypicalEvents#getTypicalAddressBook()",
+  "events" : [ {
+    "name" : "Study Session",
+    "eventDate" : "2023-04-23",
+    "location" : "Central Library",
+    "tags" : [ ]
+  }, {
+    "name" : "Track Training",
+    "eventDate" : "2023-10-19",
+    "location" : "NUS Track",
+    "tags" : [ ]
+  }, {
+    "name" : "Event Planning Meeting",
+    "eventDate" : "2023-09-20",
+    "location" : "Planning Room",
+    "tags" : [ ]
+  }, {
+    "name" : "CCA Committee Election Day",
+    "eventDate" : "2023-08-06",
+    "location" : "UTown Auditorium",
+    "tags" : [ ]
+  }, {
+    "name" : "Stakeholders Meeting",
+    "eventDate" : "2023-12-01",
+    "location" : "Shopback's Pasir Panjang Office",
+    "tags" : [ ]
+  }, {
+    "name" : "Group Party",
+    "eventDate" : "2023-04-19",
+    "location" : "Planning Room",
+    "tags" : [ ]
+  }, {
+    "name" : "Store Keeping",
+    "eventDate" : "2023-07-25",
+    "location" : "Storeroom",
+    "tags" : [ ]
+  } ]
+}
