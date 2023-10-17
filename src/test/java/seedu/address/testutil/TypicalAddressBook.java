@@ -21,7 +21,7 @@ public class TypicalAddressBook {
         }
 
         for (Event event: getTypicalEvents()) {
-            ab.addEvent(event);
+            ab.createEvent(event);
         }
 
         return ab;
