@@ -1,4 +1,5 @@
 {
+  "members": [],
   "events": [ {
     "name": "Event with invalid date field: 2023-70-80",
     "eventDate": "2023-70-80",
