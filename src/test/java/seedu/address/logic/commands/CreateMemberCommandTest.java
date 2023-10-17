@@ -151,7 +151,21 @@ public class CreateMemberCommandTest {
         }
 
         @Override
+        public void createEvent(Event event) {
+            throw new AssertionError("This method should not be called.");
+        }
+        @Override
+        public boolean hasEvent(Event event) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
         public void deleteEvent(Event target) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void setEvent(Event event, Event editedEvent) {
             throw new AssertionError("This method should not be called.");
         }
 
