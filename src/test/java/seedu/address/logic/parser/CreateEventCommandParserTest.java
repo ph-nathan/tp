@@ -46,7 +46,7 @@ public class CreateEventCommandParserTest {
     }
 
     @Test
-    public void parse_repeatedNonTagValue_failure() {
+    public void parse_repeatedValue_failure() {
         String validExpectedEventString = NAME_DESC_AURORA + LOCATION_DESC_AURORA + DATE_DESC_AURORA;
 
         // multiple names
