@@ -34,20 +34,4 @@ public class TypicalAddressBook {
 
         return ab;
     }
-
-    /**
-     * Returns an {@code AddressBook} with all the typical members and events.
-     */
-    public static AddressBook getTypicalAddressBook() {
-        AddressBook ab = new AddressBook();
-        for (Member member : getTypicalMembers()) {
-            ab.createMember(member);
-        }
-
-        for (Event event: getTypicalEvents()) {
-            ab.createEvent(event);
-        }
-
-        return ab;
-    }
 }
