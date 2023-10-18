@@ -36,9 +36,9 @@ public class CreateEventCommand extends Command {
     /**
      * Creates an CreateEventCommand to add the specified {@code Event}
      */
-    public CreateEventCommand(Event member) {
-        requireNonNull(member);
-        toCreate = member;
+    public CreateEventCommand(Event event) {
+        requireNonNull(event);
+        toCreate = event;
     }
 
     @Override
