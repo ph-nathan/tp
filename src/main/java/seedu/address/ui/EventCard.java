@@ -7,7 +7,7 @@ import javafx.scene.layout.Region;
 import seedu.address.model.event.Event;
 
 /**
- * A UI component that displays information of a {@code Member}.
+ * A UI component that displays information of a {@code Event}.
  */
 public class EventCard extends UiPart<Region> {
 
