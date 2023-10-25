@@ -5,7 +5,7 @@
 **CCACommander Ultra Promax Xtra 9000+** frees your mind of having to remember your CCA members and events. It's,
 * text-based
 * easy to learn
-* SUPER FAST FAST FAST to use
+* SUPER FAST FAST to use
 
 ### Features
 1. Add and delete members
